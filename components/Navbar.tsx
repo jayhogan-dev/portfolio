@@ -1,5 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const routes = [
   {
@@ -17,6 +22,9 @@ const routes = [
 ];
 
 const Navbar = () => {
+  const [darkMode, setDarkMode] = useState("");
+  const pathname = usePathname();
+
   return (
     <nav className="flex w-full items-center justify-between">
       <Link
@@ -44,6 +52,7 @@ const Navbar = () => {
           height={2}
           width={2}
         />
+        <ThemeSwitcher setDarkMode={setDarkMode} />
       </article>
     </nav>
   );
