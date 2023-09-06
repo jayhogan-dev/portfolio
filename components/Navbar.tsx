@@ -5,21 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import ThemeSwitcher from "./ThemeSwitcher";
-
-const routes = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "Case Studies",
-    href: "/case-studies",
-  },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
-];
+import MobileNavbar from "./MobileNavbar";
+import { routes } from "@/constants";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState("");
@@ -37,11 +25,21 @@ const Navbar = () => {
           fill
         />
       </Link>
-      <article className="flex items-center justify-between gap-5">
-        <ul className="flex items-center justify-between gap-5 text-small-regular">
+      <article className="hidden md:flex md:items-center md:justify-between md:gap-5">
+        <ul className="flex items-center justify-between gap-8 text-small-regular">
           {routes.map((route) => (
             <li key={route.label}>
-              <Link href={route.href}>{route.label}</Link>
+              <Link
+                href={route.href}
+                className={cn(
+                  "cursor-pointer hover:text-primary-black-300",
+                  pathname === route.href
+                    ? "text-primary-blue-light dark:text-primary-blue-dark"
+                    : "text-primary-white-500 dark:text-primary-white-800"
+                )}
+              >
+                {route.label}
+              </Link>
             </li>
           ))}
           <li>Resume</li>
@@ -54,6 +52,9 @@ const Navbar = () => {
         />
         <ThemeSwitcher setDarkMode={setDarkMode} />
       </article>
+      <div className="flex md:hidden">
+        <MobileNavbar />
+      </div>
     </nav>
   );
 };
