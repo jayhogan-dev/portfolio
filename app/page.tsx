@@ -32,6 +32,13 @@ export default function Home() {
           </div>
         </Button>
       </div>
+      <div className="relative flex w-full h-64">
+        <Image
+          src="/hero.png"
+          alt="copy"
+          fill
+        />
+      </div>
     </main>
   );
 }
