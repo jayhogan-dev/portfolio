@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`w-full h-full bg-white dark:bg-primary-black-200 py-4 px-20 ${poppins.className}`}
+        className={`w-full h-full max-w-[1440px] bg-primary-white-800 dark:bg-primary-black-200 py-5 px-6 md:px-10 lg:px-20 ${poppins.className}`}
       >
         <Navbar />
         {children}
