@@ -47,7 +47,7 @@ export const skills = [
     icon: "/skill-icons/sass.svg",
   },
   {
-    label: "MUI",
+    label: "Material UI",
     icon: "/skill-icons/mui.svg",
   },
   {
