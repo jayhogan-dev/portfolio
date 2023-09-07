@@ -45,7 +45,7 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="relative flex w-full h-72 xs:h-96 sm:w-[80%] md:w-full lg:w-2/3 items-center lg:h-[550px] ">
+        <div className="relative flex w-full h-72 xs:h-96 sm:w-[80%] md:w-full lg:w-2/3 items-center lg:h-[550px] max-w-[600px]">
           <Image
             src="/hero.png"
             alt="copy"
