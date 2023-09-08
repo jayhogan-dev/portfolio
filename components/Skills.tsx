@@ -15,7 +15,7 @@ const Skills = () => {
       <section className="flex flex-col py-12 md:py-[72px] items-center justify-center">
         <SectionTitle title="My skills" />
         <div className="relative -top-14 bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[150px] lg:w-[200px] lg:-top-[56px]" />
-        <div className="flex flex-wrap gap-x-5 md:gap-x-10 gap-y-5 items-center justify-center">
+        <div className="flex flex-wrap gap-x-5 md:gap-x-10 gap-y-5 md:gap-y-10 items-center justify-center">
           {skills.map((skill) => (
             <div
               key={skill.label}
@@ -34,6 +34,7 @@ const Skills = () => {
                         src={skill.icon}
                         alt={skill.label}
                         fill
+                        className="cursor-pointer"
                       />
                     </TooltipTrigger>
                     <TooltipContent>
