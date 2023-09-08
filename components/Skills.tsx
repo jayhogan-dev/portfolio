@@ -19,14 +19,14 @@ const Skills = () => {
           {skills.map((skill) => (
             <div
               key={skill.label}
-              className="relative w-16 h-16 md:h-24 md:w-24"
+              className="relative w-16 h-16 md:h-20 md:w-20 lg:h-24 lg:w-24"
             >
               <Image
                 src="/circle.svg"
                 alt="circle"
                 fill
               />
-              <div className="relative w-8 h-8 md:h-16 md:w-16">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 md:h-16 md:w-12 lg:h-12 lg:w-16">
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -34,7 +34,6 @@ const Skills = () => {
                         src={skill.icon}
                         alt={skill.label}
                         fill
-                        className="relative -top-[4.5rem] -right-6 cursor-pointer"
                       />
                     </TooltipTrigger>
                     <TooltipContent>
