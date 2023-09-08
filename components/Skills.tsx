@@ -23,7 +23,7 @@ const Skills = () => {
               key={skill.label}
               className="relative flex items-center justify-center"
             >
-              <Circle className="fill-primary-white-800 dark:fill-primary-black-300" />
+              <Circle className="fill-primary-white-800 dark:fill-primary-black-500" />
               <div className="absolute w-12 h-12">
                 <TooltipProvider>
                   <Tooltip>
