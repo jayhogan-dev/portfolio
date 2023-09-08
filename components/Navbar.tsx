@@ -14,7 +14,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex w-full items-center justify-between pb-5">
+    <nav className="flex w-full items-center justify-between py-8 px-6 md:px-10 lg:px-20 max-w-[1580px]">
       <Link
         href="/contact"
         className="bg-gradient-to-br from-cyan-800 via-cyan-400 to-yellow-300 relative h-10 w-10 hover:scale-110 rounded-lg"

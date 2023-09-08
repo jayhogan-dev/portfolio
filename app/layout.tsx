@@ -17,10 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`w-full h-full max-w-[1440px] bg-primary-white-800 dark:bg-primary-black-200 py-5 px-6 md:px-10 lg:px-20 ${poppins.className}`}
-      >
-        <Navbar />
+      <body className={`w-full h-full mx-auto bg-white ${poppins.className}`}>
+        <div className="bg-primary-white-800 dark:bg-primary-black-300">
+          <Navbar />
+        </div>
         {children}
       </body>
     </html>
