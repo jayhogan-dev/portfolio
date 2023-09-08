@@ -18,8 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`w-full h-full mx-auto bg-white ${poppins.className}`}>
-        <div className="bg-primary-white-800 dark:bg-primary-black-300">
+      <body className={`w-full h-full bg-white ${poppins.className}`}>
+        <div className="flex flex-col items-center justify-center bg-primary-white-800 dark:bg-primary-black-300">
           <Navbar />
         </div>
         {children}

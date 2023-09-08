@@ -63,6 +63,10 @@ export const skills = [
     icon: "/skill-icons/mongodb.svg",
   },
   {
+    label: "Expo",
+    icon: "/skill-icons/expo.svg",
+  },
+  {
     label: "Git",
     icon: "/skill-icons/git.svg",
   },
