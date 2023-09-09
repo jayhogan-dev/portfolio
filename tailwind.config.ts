@@ -28,8 +28,9 @@ module.exports = {
         },
         "primary-black": {
           200: "#151E2C",
-          300: "#29374C",
+          300: "#192333",
           400: "#778295",
+          500: "#29374C",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -86,6 +87,11 @@ module.exports = {
       },
       screens: {
         xs: "500px",
+      },
+      boxShadow: {
+        "service-icon": "10px 10px 26px 0px rgba(21, 94, 117, 0.38)",
+        "service-box": "0px 1px 20px 0px #E0ECFF",
+        "service-box-dark": "0px 1px 20px 0px #1F2E48",
       },
       fontSize: {
         heading1: [
