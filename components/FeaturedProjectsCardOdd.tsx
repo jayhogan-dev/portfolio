@@ -1,19 +1,8 @@
+import { FeaturedProjectsCardProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-interface FeaturedProjectsCardProps {
-  bgColor: string;
-  technologiesUsedBgColor: string;
-  projectTitle: string;
-  projectDescription: string;
-  frontend: string;
-  backend: string;
-  link: string;
-  laptopImage: string;
-  mobileImage: string;
-}
-
-const FeaturedProjectsCard = ({
+const FeaturedProjectsCardOdd = ({
   bgColor,
   technologiesUsedBgColor,
   projectTitle,
@@ -27,13 +16,13 @@ const FeaturedProjectsCard = ({
   return (
     <article className="flex flex-col">
       <div
-        className={`flex flex-col md:flex-row md:justify-between ${bgColor} rounded-2xl py-11 px-6 gap-7`}
+        className={`flex flex-col md:flex-row md:justify-between ${bgColor} rounded-2xl py-11 px-6 md:px-0 gap-7`}
       >
-        <div className="flex flex-col gap-7 bg-red-300 md:w-[330px]">
-          <h1 className="text-heading3 text-white">
+        <div className="flex flex-col gap-7 sm:ml-10 xl:ml-20 sm:w-[450px] xl:w-[500px] justify-center">
+          <h1 className="text-heading3 text-white xl:text-heading2">
             {projectTitle} -
-            <br className="md:hidden" /> {projectDescription}{" "}
-            <br className="md:hidden" />
+            <br className="sm:hidden" /> {projectDescription}{" "}
+            <br className="sm:hidden" />
             Application
           </h1>
           <div className="flex w-full gap-3 text-center">
@@ -58,15 +47,15 @@ const FeaturedProjectsCard = ({
             />
           </Link>
         </div>
-        <div className="flex items-end md:pt-5">
-          <div className="relative w-[230px] h-32 md:w-[400px] md:h-[200px] z-10">
+        <div className="flex items-end md:pt-5 overflow-hidden">
+          <div className="relative w-[230px] h-32 sm:w-[450px] sm:h-[250px] md:w-[550px] xl:h-[300px] z-10">
             <Image
               src={laptopImage}
               alt="laptop"
               fill
             />
           </div>
-          <div className="-ml-3 relative w-[60px] h-[112px] md:w-[90px] md:h-[160px]">
+          <div className="-ml-3 relative w-[60px] h-[112px] sm:h-[200px] sm:w-[125px] lg:h-[220px] lg:w-[150px] xl:h-[260px] md:ml-0 lg:-mr-5 md:hidden lg:flex xl:-mr-8">
             <Image
               src={mobileImage}
               alt="phone"
@@ -79,4 +68,4 @@ const FeaturedProjectsCard = ({
   );
 };
 
-export default FeaturedProjectsCard;
+export default FeaturedProjectsCardOdd;

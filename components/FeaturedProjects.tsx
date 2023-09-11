@@ -1,18 +1,19 @@
-import FeaturedProjectsCard from "./FeaturedProjectsCard";
+import FeaturedProjectsCardEven from "./FeaturedProjectsCardEven";
+import FeaturedProjectsCardOdd from "./FeaturedProjectsCardOdd";
 import SectionTitle from "./SectionTitle";
-import LightContainer from "./containers/Light";
+import DarkContainer from "./containers/Dark";
 
 const FeaturedProjects = () => {
   return (
-    <LightContainer>
+    <DarkContainer>
       <section className="flex flex-col items-center justify-center py-12 md:py-[72px]">
         <div className="w-full">
           <SectionTitle title="Featured Projects" />
         </div>
         <div className="relative -top-14 -right-[85px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[140px] lg:w-[190px] lg:-top-[56px] lg:left-[115px]" />
         {/* Projects */}
-        <div className="flex flex-col w-full gap-5">
-          <FeaturedProjectsCard
+        <div className="flex flex-col w-full gap-5 md:gap-10">
+          <FeaturedProjectsCardOdd
             projectTitle="Morent"
             projectDescription="A Car Rental"
             frontend="React, Next.js"
@@ -21,9 +22,9 @@ const FeaturedProjects = () => {
             bgColor="bg-blue-600"
             technologiesUsedBgColor="bg-blue-400"
             laptopImage="/morent-laptop.png"
-            mobileImage="/morent-mobile.png"
+            mobileImage="/morent-mobile-1.png"
           />
-          <FeaturedProjectsCard
+          <FeaturedProjectsCardEven
             projectTitle="JobIT"
             projectDescription="A Job Finding"
             frontend="React, Next.js"
@@ -36,7 +37,7 @@ const FeaturedProjects = () => {
           />
         </div>
       </section>
-    </LightContainer>
+    </DarkContainer>
   );
 };
 
