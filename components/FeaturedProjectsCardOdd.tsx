@@ -48,14 +48,14 @@ const FeaturedProjectsCardOdd = ({
           </Link>
         </div>
         <div className="flex items-end md:pt-5 overflow-hidden">
-          <div className="relative w-[230px] h-32 sm:w-[450px] sm:h-[250px] md:w-[550px] xl:h-[300px] z-10">
+          <div className="relative w-[230px] h-32 sm:w-[450px] sm:h-[250px] md:w-[420px] md:min-w-[420px] md:max-w-[420px] xl:h-[280px] z-10">
             <Image
               src={laptopImage}
               alt="laptop"
               fill
             />
           </div>
-          <div className="-ml-3 relative w-[60px] h-[112px] sm:h-[200px] sm:w-[125px] lg:h-[220px] lg:w-[150px] xl:h-[260px] md:ml-0 lg:-mr-5 md:hidden lg:flex xl:-mr-8">
+          <div className="-ml-3 relative w-[60px] h-[112px] sm:h-[200px] sm:w-[125px] lg:h-[220px] lg:w-[150px] lg:min-w-[150px] lg:max-w-[150px] xl:h-[250px] md:ml-0 lg:-mr-5 md:hidden lg:flex xl:-mr-8">
             <Image
               src={mobileImage}
               alt="phone"
