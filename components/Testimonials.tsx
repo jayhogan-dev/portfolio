@@ -12,7 +12,7 @@ const Testimonials = () => {
         </div>
         <div className="relative -top-24 -right-[52px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[150px] sm:-top-14 sm:-right-0 sm:-left-10 lg:w-[200px] lg:-top-[56px] lg:-left-[50px]" />
         {/* Testimonials */}
-        <article className="flex flex-col">
+        <article className="flex flex-col gap-5">
           <div className="flex gap-5 justify-between items-start">
             {/* Image */}
             <div className="flex items-center justify-center h-48 w-48 bg-primary-blue-light dark:bg-primary-blue-dark rounded-lg">
@@ -39,6 +39,55 @@ const Testimonials = () => {
               </Button>
             </div>
           </div>
+          <div className="flex justify-start gap-2">
+            <Image
+              src="/web-icons/filled-star.svg"
+              alt="star"
+              height={20}
+              width={20}
+            />
+            <Image
+              src="/web-icons/filled-star.svg"
+              alt="star"
+              height={20}
+              width={20}
+            />
+            <Image
+              src="/web-icons/filled-star.svg"
+              alt="star"
+              height={20}
+              width={20}
+            />
+            <Image
+              src="/web-icons/filled-star.svg"
+              alt="star"
+              height={20}
+              width={20}
+            />
+            <Image
+              src="/web-icons/filled-star.svg"
+              alt="star"
+              height={20}
+              width={20}
+            />
+          </div>
+          <blockquote className="flex flex-col gap-5">
+            <p className="text-body-regular text-primary-white-500 dark:text-white-800">
+              I have had the pleasure of working with Jay as a Software
+              Developer and can confidently say that he is a valuable asset to
+              any team. He is highly skilled in ReactJS, NextJS, Javascript,
+              Material UI, Tailwind CSS, Redux, and GitHub, and consistently
+              delivers high-quality code
+            </p>
+            <footer>
+              <p className="text-body-semibold text-primary-black-300 dark:text-white">
+                — Anonymous
+              </p>
+              <p className="text-body-regular text-primary-white-500 dark:text-white-800">
+                Creator of Nothing
+              </p>
+            </footer>
+          </blockquote>
         </article>
       </section>
     </DarkContainer>
