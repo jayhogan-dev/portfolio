@@ -55,7 +55,7 @@ const FeaturedProjectsCardEven = ({
               fill
             />
           </div>
-          <div className="relative w-[60px] h-[112px] sm:h-[200px] sm:w-[125px] lg:h-[220px] lg:w-[130px] xl:h-[260px] xl:w-[150px] md:hidden lg:flex">
+          <div className="relative mb-3 w-[60px] h-[112px] sm:h-[200px] sm:w-[125px] lg:h-[220px] lg:w-[130px] xl:h-[260px] xl:w-[150px] md:hidden lg:flex">
             <Image
               src={mobileImage}
               alt="phone"

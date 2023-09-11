@@ -9,8 +9,6 @@ import {
   TooltipContent,
 } from "./ui/tooltip";
 
-import Circle from "@/public/circle.svg";
-
 const Skills = () => {
   return (
     <LightContainer>
@@ -21,10 +19,10 @@ const Skills = () => {
           {skills.map((skill) => (
             <div
               key={skill.label}
-              className="relative flex items-center justify-center"
+              className="relative flex items-center justify-center rounded-full w-[52px] h-[52px] md:w-[100px] md:h-[100px] bg-primary-white-800 dark:bg-primary-black-500"
             >
-              <Circle className="fill-primary-white-800 dark:fill-primary-black-500" />
-              <div className="absolute w-12 h-12">
+              {/* <Circle className="fill-primary-white-800 dark:fill-primary-black-500" /> */}
+              <div className="absolute w-6 h-6 md:w-12 md:h-12">
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
