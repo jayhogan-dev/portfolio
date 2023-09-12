@@ -83,7 +83,7 @@ const Testimonials = () => {
             <div className="md:w-4/5">
               {testimonials.map((testimonial, index) => (
                 <TestimonialCard
-                  key={index}
+                  key={testimonial.name}
                   name={testimonial.name}
                   quote={testimonial.quote}
                   title={testimonial.title}
