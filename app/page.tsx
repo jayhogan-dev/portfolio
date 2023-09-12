@@ -2,6 +2,7 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Skills from "@/components/Skills";
+import Testimonials from "@/components/Testimonials";
 import WorkExperience from "@/components/WorkExperience";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Services />
       <WorkExperience />
       <FeaturedProjects />
+      <Testimonials />
     </main>
   );
 }

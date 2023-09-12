@@ -1,6 +1,4 @@
-import React from "react";
 import LightContainer from "./containers/Light";
-import Image from "next/image";
 import LineCircle from "@/public/web-icons/line-circle.svg";
 import WorkExperienceCard from "./WorkExperienceCard";
 

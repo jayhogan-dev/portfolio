@@ -1,12 +1,12 @@
 import FeaturedProjectsCardEven from "./FeaturedProjectsCardEven";
 import FeaturedProjectsCardOdd from "./FeaturedProjectsCardOdd";
 import SectionTitle from "./SectionTitle";
-import DarkContainer from "./containers/Dark";
+import LightContainer from "./containers/Light";
 
 const FeaturedProjects = () => {
   return (
-    <DarkContainer>
-      <section className="flex flex-col items-center justify-center py-12 md:py-[72px]">
+    <LightContainer>
+      <section className="flex flex-col items-center justify-center py-10 md:py-16">
         <div className="w-full">
           <SectionTitle title="Featured Projects" />
         </div>
@@ -37,7 +37,7 @@ const FeaturedProjects = () => {
           />
         </div>
       </section>
-    </DarkContainer>
+    </LightContainer>
   );
 };
 

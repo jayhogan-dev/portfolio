@@ -75,3 +75,27 @@ export const skills = [
     icon: "/skill-icons/github.svg",
   },
 ];
+
+export const testimonials = [
+  {
+    name: "First",
+    quote:
+      "I have had the pleasure of working with Jay as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in ReactJS NextJS, Javascript, Material UI, Tailwind CSS, Redux, and GitHub, and consistently delivers high-quality code",
+    title: "Creator of Nothing",
+    stars: 5,
+  },
+  {
+    name: "Second",
+    quote:
+      "I have had the pleasure of working with Jay as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in ReactJS NextJS, Javascript, Material UI, Tailwind CSS, Redux, and GitHub, and consistently delivers high-quality code",
+    title: "Creator of Something",
+    stars: 4,
+  },
+  {
+    name: "Third",
+    quote:
+      "I have had the pleasure of working with Jay as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in ReactJS NextJS, Javascript, Material UI, Tailwind CSS, Redux, and GitHub, and consistently delivers high-quality code",
+    title: "Alive",
+    stars: 3,
+  },
+];

@@ -1,4 +1,3 @@
-import React from "react";
 import DarkContainer from "./containers/Dark";
 import SectionTitle from "./SectionTitle";
 import ServiceCard from "./ServiceCard";
