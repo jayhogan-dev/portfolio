@@ -2,6 +2,7 @@ import Image from "next/image";
 import DarkContainer from "./containers/Dark";
 import SectionTitle from "./SectionTitle";
 import { Button } from "./ui/button";
+import Stars from "./Stars";
 
 const Testimonials = () => {
   return (
@@ -39,38 +40,7 @@ const Testimonials = () => {
               </Button>
             </div>
           </div>
-          <div className="flex justify-start gap-2">
-            <Image
-              src="/web-icons/filled-star.svg"
-              alt="star"
-              height={20}
-              width={20}
-            />
-            <Image
-              src="/web-icons/filled-star.svg"
-              alt="star"
-              height={20}
-              width={20}
-            />
-            <Image
-              src="/web-icons/filled-star.svg"
-              alt="star"
-              height={20}
-              width={20}
-            />
-            <Image
-              src="/web-icons/filled-star.svg"
-              alt="star"
-              height={20}
-              width={20}
-            />
-            <Image
-              src="/web-icons/filled-star.svg"
-              alt="star"
-              height={20}
-              width={20}
-            />
-          </div>
+          <Stars stars={5} />
           <blockquote className="flex flex-col gap-5">
             <p className="text-body-regular text-primary-white-500 dark:text-white-800">
               I have had the pleasure of working with Jay as a Software
