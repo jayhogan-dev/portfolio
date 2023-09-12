@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 interface StarsProps {
-  stars: number;
+  starCount: number;
 }
 
-const Stars = ({ stars }: StarsProps) => {
+const Stars = ({ starCount }: StarsProps) => {
   return (
-    <div className="flex justify-start gap-2">
-      {Array.from({ length: stars }, (_, index) => (
+    <>
+      {Array.from({ length: starCount }, (_, index) => (
         <Image
           key={index}
           src="/web-icons/filled-star.svg"
@@ -16,7 +16,7 @@ const Stars = ({ stars }: StarsProps) => {
           width={20}
         />
       ))}
-    </div>
+    </>
   );
 };
 
