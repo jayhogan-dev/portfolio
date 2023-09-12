@@ -23,14 +23,14 @@ const TestimonialCard = ({
             <Stars starCount={stars} />
           </div>
           <blockquote className="flex flex-col gap-5">
-            <p className="text-body-regular text-primary-white-500 dark:text-white-800">
+            <p className="text-body-regular text-primary-white-500 dark:text-primary-white-800">
               {quote}
             </p>
             <footer>
               <p className="text-body-semibold text-primary-black-300 dark:text-white">
                 — {name}
               </p>
-              <p className="text-body-regular text-primary-white-500 dark:text-white-800">
+              <p className="text-body-regular text-primary-white-500 dark:text-primary-white-800">
                 {title}
               </p>
             </footer>
