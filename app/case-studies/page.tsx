@@ -1,4 +1,6 @@
+import CaseStudyCard from "@/components/CaseStudyCard";
 import DarkContainer from "@/components/containers/Dark";
+import LightContainer from "@/components/containers/Light";
 
 const CaseStudiesPage = () => {
   return (
@@ -17,6 +19,18 @@ const CaseStudiesPage = () => {
           </p>
         </section>
       </DarkContainer>
+      <LightContainer>
+        <section className="flex flex-col py-12 md:py-[72px] items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <CaseStudyCard
+              title="Morrent"
+              color="bg-blue-300"
+              subtitle="Car Rental Application"
+              imgUrl="/morent-laptop.png"
+            />
+          </div>
+        </section>
+      </LightContainer>
     </main>
   );
 };
