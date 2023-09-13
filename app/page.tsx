@@ -1,3 +1,4 @@
+import ContactBanner from "@/components/ContactBanner";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -14,6 +15,7 @@ export default function Home() {
       <WorkExperience />
       <FeaturedProjects />
       <Testimonials />
+      <ContactBanner />
     </main>
   );
 }
