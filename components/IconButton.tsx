@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MouseEventHandler } from "react";
+import { Button } from "./ui/button";
 
 interface IconButtonProps {
   iconUrl: string;
@@ -8,17 +9,18 @@ interface IconButtonProps {
 
 const IconButton = ({ iconUrl, handleClick }: IconButtonProps) => {
   return (
-    <button
+    <Button
+      size="icon"
+      className="dark:bg-primary-white-800 bg-white rounded-full p-3 dark:hover:bg-primary-white-800/75 hover:bg-white/60"
       onClick={handleClick}
-      className="bg-primary-white-800 rounded-full p-3 hover:bg-primary-white-800/75"
     >
       <Image
         src={iconUrl}
-        alt="arrow"
+        alt="right arrow"
         height={20}
         width={20}
       />
-    </button>
+    </Button>
   );
 };
 
