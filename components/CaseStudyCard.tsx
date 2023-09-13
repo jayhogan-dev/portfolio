@@ -16,7 +16,7 @@ const CaseStudyCard = ({
   return (
     <div className="flex flex-col gap-3">
       <div className={`flex h-52 w-80 relative rounded-2xl ${color}`}>
-        <div className="absolute h-40 w-72 bottom-0 left-0 right-0 text-center">
+        <div className="absolute h-40 w-60 bottom-0 left-0 right-0 mx-auto text-center">
           <Image
             src={imgUrl}
             alt={title}
