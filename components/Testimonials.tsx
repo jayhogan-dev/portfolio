@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import { testimonials } from "@/constants";
 import { useState } from "react";
+import IconButton from "./IconButton";
 
 const Testimonials = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -32,20 +33,13 @@ const Testimonials = () => {
         </div>
         <div className="relative -top-24 -right-[52px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[150px] sm:-top-14 sm:-right-0 sm:-left-10 lg:w-[200px] lg:-top-[56px] lg:-left-[50px]" />
         {/* Testimonials */}
-        <article className="flex flex-col md:flex-row gap-5">
+        <article className="flex flex-col md:flex-row md:w-full gap-5">
           <div className="flex gap-5 justify-between items-start md:justify-center md:items-center">
             <div className="hidden md:flex">
-              <Button
-                className="p-3 bg-white"
-                onClick={handlePrev}
-              >
-                <Image
-                  src="/web-icons/carousel-left-arrow.svg"
-                  alt="left arrow"
-                  height={25}
-                  width={25}
-                />
-              </Button>
+              <IconButton
+                handleClick={handlePrev}
+                iconUrl="/web-icons/carousel-left-arrow.svg"
+              />
             </div>
             <div className="flex items-center justify-center h-48 w-48 bg-primary-blue-light dark:bg-primary-blue-dark rounded-xl">
               <h1 className="text-[100px] font-black text-white">
@@ -55,28 +49,14 @@ const Testimonials = () => {
             {/* Arrows controlled by state */}
             <div className="flex md:hidden items-center gap-3">
               {/* Left circle */}
-              <Button
-                className="p-3 bg-white"
-                onClick={handlePrev}
-              >
-                <Image
-                  src="/web-icons/carousel-left-arrow.svg"
-                  alt="left arrow"
-                  height={20}
-                  width={20}
-                />
-              </Button>
-              <Button
-                className="p-3 bg-white"
-                onClick={handleNext}
-              >
-                <Image
-                  src="/web-icons/carousel-right-arrow.svg"
-                  alt="right arrow"
-                  height={20}
-                  width={20}
-                />
-              </Button>
+              <IconButton
+                handleClick={handlePrev}
+                iconUrl="/web-icons/carousel-left-arrow.svg"
+              />
+              <IconButton
+                handleClick={handleNext}
+                iconUrl="/web-icons/carousel-right-arrow.svg"
+              />
             </div>
           </div>
           <div className="md:flex md:justify-center md:ml-5 md:items-center md:w-full">
@@ -93,17 +73,10 @@ const Testimonials = () => {
               ))}
             </div>
             <div className="hidden md:flex md:w-1/5 md:justify-end">
-              <Button
-                className="p-3 bg-white"
-                onClick={handleNext}
-              >
-                <Image
-                  src="/web-icons/carousel-right-arrow.svg"
-                  alt="right arrow"
-                  height={20}
-                  width={20}
-                />
-              </Button>
+              <IconButton
+                handleClick={handleNext}
+                iconUrl="/web-icons/carousel-right-arrow.svg"
+              />
             </div>
           </div>
         </article>
