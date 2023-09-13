@@ -10,6 +10,11 @@ const CaseStudiesPage = () => {
           </h1>
           <div className="xxs:hidden relative -top-24 -right-[66px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[88px]" />
           <div className="relative -top-[70px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[130px] xxs:-top-14 xxs:w-[230px] xxs:-right-[68px] lg:w-[415px] lg:-top-[64px] lg:-right-[120px]" />
+          <p className="-mt-5 text-small-regular lg:text-paragraph-regular text-primary-white-500 dark:text-primary-white-800 w-full sm:w-[500px] lg:w-[650px] text-center">
+            Dive into my recent success stories and discover how I&apos;ve
+            helped clients overcome challenges, innovate, and achieve their
+            goals
+          </p>
         </section>
       </DarkContainer>
     </main>
