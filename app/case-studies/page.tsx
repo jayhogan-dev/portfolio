@@ -23,11 +23,11 @@ const CaseStudiesPage = () => {
         <section className="flex flex-col py-12 md:py-[72px] items-center justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10">
             <CaseStudyCard
-              title="Morrent"
+              title="Morent"
               color="bg-blue-300"
               subtitle="Car Rental Application"
               image="/morent-laptop.png"
-              linkUrl="/"
+              linkUrl="/morent"
             />
             <CaseStudyCard
               title="Jobit"
