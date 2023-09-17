@@ -99,3 +99,50 @@ export const testimonials = [
     stars: 3,
   },
 ];
+
+export const morentStack = [
+  {
+    label: "JavaScript",
+    icon: "/skill-icons/javascript.svg",
+  },
+  {
+    label: "TypeScript",
+    icon: "/skill-icons/typescript.svg",
+  },
+  {
+    label: "React",
+    icon: "/skill-icons/react.svg",
+  },
+  {
+    label: "Nextjs",
+    icon: "/skill-icons/next.svg",
+  },
+  {
+    label: "Tailwind",
+    icon: "/skill-icons/tailwind.svg",
+  },
+  {
+    label: "CSS",
+    icon: "/skill-icons/css.svg",
+  },
+  {
+    label: "Material UI",
+    icon: "/skill-icons/mui.svg",
+  },
+  {
+    label: "MongoDB",
+    icon: "/skill-icons/mongodb.svg",
+  },
+  {
+    label: "Clerk",
+    icon: "/skill-icons/clerk.png",
+  },
+  {
+    label: "Git",
+    icon: "/skill-icons/git.svg",
+  },
+  {
+    label: "Github",
+    icon: "/skill-icons/github.svg",
+  },
+];
