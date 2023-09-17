@@ -27,7 +27,7 @@ const CaseStudiesPage = () => {
               color="bg-blue-300"
               subtitle="Car Rental Application"
               image="/morent-laptop.png"
-              linkUrl="/morent"
+              linkUrl="/case-studies/morent"
             />
             <CaseStudyCard
               title="Jobit"
