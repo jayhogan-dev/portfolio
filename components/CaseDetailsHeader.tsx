@@ -30,7 +30,7 @@ const CaseDetailsHeader = () => {
             />
           </div>
         </div>
-        <div className="flex flex-row justify-between w-[500px]">
+        <div className="flex flex-row justify-between bg-red-300 w-[330px] sm:w-[500px]">
           <div className="flex items-center gap-3">
             <Image
               src="/web-icons/earth.svg"
@@ -40,7 +40,7 @@ const CaseDetailsHeader = () => {
             />
             <Link
               href="https://cohort5-dynamic-duo-car-rent.vercel.app/"
-              className="text-paragraph-bold"
+              className="text-small-bold md:text-paragraph-bold"
             >
               Demo Site
             </Link>
@@ -60,7 +60,7 @@ const CaseDetailsHeader = () => {
             />
             <Link
               href="https://github.com/JavaScript-Mastery-PRO/Cohort5_DynamicDuo_CarRent"
-              className="text-paragraph-bold"
+              className="text-small-bold md:text-paragraph-bold"
             >
               Source Code
             </Link>
