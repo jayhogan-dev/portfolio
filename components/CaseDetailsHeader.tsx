@@ -30,7 +30,7 @@ const CaseDetailsHeader = () => {
             />
           </div>
         </div>
-        <div className="flex flex-row justify-between bg-red-300 w-[330px] sm:w-[500px]">
+        <div className="flex flex-row justify-between w-[330px] sm:w-[500px]">
           <div className="flex items-center gap-3">
             <Image
               src="/web-icons/earth.svg"
