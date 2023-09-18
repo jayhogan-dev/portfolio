@@ -146,3 +146,26 @@ export const morentStack = [
     icon: "/skill-icons/github.svg",
   },
 ];
+
+export const myProcesses = [
+  {
+    label: "Definition",
+    icon: "/web-icons/pencil.svg",
+  },
+  {
+    label: "Design",
+    icon: "/web-icons/image.svg",
+  },
+  {
+    label: "Planning",
+    icon: "/web-icons/document.svg",
+  },
+  {
+    label: "Development",
+    icon: "/web-icons/development.svg",
+  },
+  {
+    label: "Deployment",
+    icon: "/web-icons/deploy.svg",
+  },
+];
