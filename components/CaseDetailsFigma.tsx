@@ -12,7 +12,7 @@ const CaseDetailsFigma = ({ imgUrl }: CaseDetailsFigmaProps) => {
           High-Fidelity Figma Design
         </p>
       </div>
-      <div className="relative w-full h-52 md:h-96 lg:h-[475px] xl:h-[550px]">
+      <div className="relative w-full h-52 sm:h-80 md:h-96 lg:h-[475px] xl:h-[550px]">
         <Image
           src={imgUrl}
           alt="figma"
