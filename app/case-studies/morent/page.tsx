@@ -6,6 +6,7 @@ import CaseDetailsOtherStudies from "@/components/CaseDetailsOtherStudies";
 import CaseDetailsProblemStatement from "@/components/CaseDetailsProblemStatement";
 import CaseDetailsProcess from "@/components/CaseDetailsProcess";
 import CaseDetailsTechStack from "@/components/CaseDetailsTechStack";
+import ContactBanner from "@/components/ContactBanner";
 
 const MorentPage = () => {
   return (
@@ -26,6 +27,7 @@ const MorentPage = () => {
       <CaseDetailsProcess />
       <CaseDetailsLearnings />
       <CaseDetailsOtherStudies />
+      <ContactBanner />
     </div>
   );
 };
