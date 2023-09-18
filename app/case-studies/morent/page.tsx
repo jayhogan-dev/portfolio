@@ -1,4 +1,5 @@
 import CaseDetailsDescription from "@/components/CaseDetailsDescription";
+import CaseDetailsFigma from "@/components/CaseDetailsFigma";
 import CaseDetailsHeader from "@/components/CaseDetailsHeader";
 import CaseDetailsProblemStatement from "@/components/CaseDetailsProblemStatement";
 import CaseDetailsTechStack from "@/components/CaseDetailsTechStack";
@@ -18,6 +19,7 @@ const MorentPage = () => {
         image="/case-details/morent-problem.png"
         altText="Cars"
       />
+      <CaseDetailsFigma imgUrl="/case-details/morent-figma.png" />
     </div>
   );
 };

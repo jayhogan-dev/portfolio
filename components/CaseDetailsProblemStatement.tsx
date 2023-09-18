@@ -23,7 +23,7 @@ const CaseDetailsProblemStatement = ({
           <p className="text-small-regular sm:text-paragraph-regular text-primary-white-500 dark:text-primary-white-800">
             {statement}
           </p>
-          <div className="mt-2 relative w-full h-48 xxs:h-64 md:h-[275px] lg:h-[480px]">
+          <div className="mt-2 relative w-full h-48 xs:h-64 md:h-[275px] lg:h-[420px] xl:h-[475px]">
             <Image
               src={image}
               alt={altText}
