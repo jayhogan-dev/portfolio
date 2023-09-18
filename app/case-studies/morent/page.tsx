@@ -2,6 +2,7 @@ import CaseDetailsDescription from "@/components/CaseDetailsDescription";
 import CaseDetailsFigma from "@/components/CaseDetailsFigma";
 import CaseDetailsHeader from "@/components/CaseDetailsHeader";
 import CaseDetailsLearnings from "@/components/CaseDetailsLearnings";
+import CaseDetailsOtherStudies from "@/components/CaseDetailsOtherStudies";
 import CaseDetailsProblemStatement from "@/components/CaseDetailsProblemStatement";
 import CaseDetailsProcess from "@/components/CaseDetailsProcess";
 import CaseDetailsTechStack from "@/components/CaseDetailsTechStack";
@@ -24,6 +25,7 @@ const MorentPage = () => {
       <CaseDetailsFigma imgUrl="/case-details/morent-figma.png" />
       <CaseDetailsProcess />
       <CaseDetailsLearnings />
+      <CaseDetailsOtherStudies />
     </div>
   );
 };
