@@ -10,6 +10,11 @@ export default {
       title: 'Title',
     },
     {
+      name: 'subtitle',
+      type: 'string',
+      title: 'Subtitle',
+    },
+    {
       name: 'laptopImage',
       type: 'image',
       title: 'Laptop Image',
@@ -23,11 +28,14 @@ export default {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
+      options: {
+        source: 'title',
+      },
     },
     {
       // Header demo site link: should this be url instead?
       name: 'demoSiteLink',
-      type: 'string',
+      type: 'url',
       title: 'Demo Site Link',
     },
     {
@@ -58,6 +66,7 @@ export default {
       name: 'techStack',
       type: 'array',
       title: 'Tech Stack',
+      of: [{type: 'string'}],
     },
     {
       name: 'description',
@@ -78,11 +87,13 @@ export default {
       name: 'challenges',
       type: 'array',
       title: 'Challenges',
+      of: [{type: 'string'}],
     },
     {
       name: 'learnings',
       type: 'array',
       title: 'Learnings',
+      of: [{type: 'string'}],
     },
   ],
 }
