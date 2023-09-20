@@ -9,3 +9,42 @@ export interface FeaturedProjectsCardProps {
   laptopImage: string;
   mobileImage: string;
 }
+
+export interface Project {
+  title: string;
+  subtitle: string;
+  laptopImage: {
+    asset: {
+      _ref: string;
+    };
+  };
+  color: string;
+  mobileImage: {
+    asset: {
+      _ref: string;
+    };
+  };
+  slug: {
+    current: string;
+  };
+  demoSiteLink: string;
+  sourceCodeLink: string;
+  role: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+  problemStatement: string;
+  problemStatementImage: {
+    asset: {
+      _ref: string;
+    };
+  };
+  figmaDesign: {
+    asset: {
+      _ref: string;
+    };
+  };
+  challenges: string[];
+  learnings: string[];
+  _id: string;
+}

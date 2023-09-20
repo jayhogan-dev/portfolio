@@ -3,7 +3,23 @@ import DarkContainer from "./containers/Dark";
 import SectionTitle from "./SectionTitle";
 import Link from "next/link";
 
-const CaseDetailsHeader = () => {
+interface CaseDetailsHeaderProps {
+  title: string;
+  subtitle: string;
+  laptopImage: string;
+  mobileImage: string;
+  demoSiteLink: string;
+  sourceCodeLink: string;
+}
+
+const CaseDetailsHeader = ({
+  title,
+  subtitle,
+  laptopImage,
+  mobileImage,
+  demoSiteLink,
+  sourceCodeLink,
+}: CaseDetailsHeaderProps) => {
   return (
     <DarkContainer>
       <section className="flex flex-col py-12 gap-6 md:py-[72px] items-center justify-center">
@@ -11,20 +27,20 @@ const CaseDetailsHeader = () => {
           Web Dev Project
         </h2>
         <div className="w-[320px] lg:w-full">
-          <SectionTitle title="Morent - A Car Rental Website" />
+          <SectionTitle title={`${title} - A ${subtitle}`} />
         </div>
         <div className="relative -top-[120px] -left-[68px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[126px] lg:w-[170px] lg:-top-[80px] lg:-left-[275px]" />
         <div className="flex flex-row -mt-16 items-end">
           <div className="relative w-[230px] h-32 sm:w-[400px] sm:h-[250px] lg:w-[475px] lg:h-[300px]">
             <Image
-              src="/morent-laptop.png"
+              src={laptopImage}
               alt="laptop"
               fill
             />
           </div>
           <div className="relative mb-1 sm:mb-3 w-[60px] h-[112px] sm:h-[200px] sm:w-[125px] lg:h-[220px] lg:w-[130px]">
             <Image
-              src="/morent-mobile-1.png"
+              src={mobileImage}
               alt="phone"
               fill
             />
@@ -39,7 +55,7 @@ const CaseDetailsHeader = () => {
               height={24}
             />
             <Link
-              href="https://cohort5-dynamic-duo-car-rent.vercel.app/"
+              href={demoSiteLink}
               className="text-small-bold md:text-paragraph-bold"
             >
               Demo Site
@@ -60,7 +76,7 @@ const CaseDetailsHeader = () => {
               height={24}
             />
             <Link
-              href="https://github.com/JavaScript-Mastery-PRO/Cohort5_DynamicDuo_CarRent"
+              href={sourceCodeLink}
               className="text-small-bold md:text-paragraph-bold"
             >
               Source Code

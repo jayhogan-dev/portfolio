@@ -15,6 +15,11 @@ export default {
       title: 'Subtitle',
     },
     {
+      name: 'color',
+      type: 'string',
+      title: 'Color',
+    },
+    {
       name: 'laptopImage',
       type: 'image',
       title: 'Laptop Image',
@@ -23,6 +28,11 @@ export default {
       name: 'mobileImage',
       type: 'image',
       title: 'Mobile Image',
+    },
+    {
+      name: 'problemStatementImage',
+      type: 'image',
+      title: 'Problem Statement Image',
     },
     {
       name: 'slug',
@@ -52,21 +62,14 @@ export default {
     {
       // Should this be a date or a string?
       name: 'startDate',
-      type: 'date',
+      type: 'string',
       title: 'Start Date',
     },
     {
       // Should this be a date or a string?
       name: 'endDate',
-      type: 'date',
+      type: 'string',
       title: 'End Date',
-    },
-    {
-      // Going to need a label as well
-      name: 'techStack',
-      type: 'array',
-      title: 'Tech Stack',
-      of: [{type: 'string'}],
     },
     {
       name: 'description',

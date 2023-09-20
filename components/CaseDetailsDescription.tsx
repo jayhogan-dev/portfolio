@@ -2,14 +2,10 @@ import DarkContainer from "./containers/Dark";
 
 interface CaseDetailsDescriptionProps {
   description: string;
-  pageFeatures: string;
-  userFeatures: string;
 }
 
 const CaseDetailsDescription = ({
   description,
-  pageFeatures,
-  userFeatures,
 }: CaseDetailsDescriptionProps) => {
   return (
     <DarkContainer>
@@ -17,14 +13,6 @@ const CaseDetailsDescription = ({
         <div className="w-full sm:w-[500px] md:w-[600px] lg:w-[880px]">
           <p className="text-small-regular sm:text-paragraph-regular text-primary-white-500 dark:text-primary-white-800">
             {description}
-          </p>
-          <br />
-          <p className="text-small-regular sm:text-paragraph-regular text-primary-white-500 dark:text-primary-white-800">
-            {pageFeatures}
-          </p>
-          <br />
-          <p className="text-small-regular sm:text-paragraph-regular text-primary-white-500 dark:text-primary-white-800">
-            {userFeatures}
           </p>
         </div>
       </section>
