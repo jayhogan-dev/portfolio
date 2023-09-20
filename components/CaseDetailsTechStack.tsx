@@ -2,7 +2,17 @@ import { morentStack } from "@/constants";
 import TechStack from "./TechStack";
 import LightContainer from "./containers/Light";
 
-const CaseDetailsTechStack = () => {
+interface CaseDetailsTechStackProps {
+  role: string;
+  startDate: string;
+  endDate: string;
+}
+
+const CaseDetailsTechStack = ({
+  role,
+  startDate,
+  endDate,
+}: CaseDetailsTechStackProps) => {
   return (
     <LightContainer>
       <section className="flex flex-col py-12 gap-6 md:py-[72px] items-center justify-center w-full">
@@ -12,7 +22,7 @@ const CaseDetailsTechStack = () => {
               My Role
             </h3>
             <h2 className="text-paragraph-bold md:text-base-bold text-primary-black-200 dark:text-white">
-              Full-Stack Developer
+              {role}
             </h2>
           </div>
           <div className="flex flex-col gap-3">
@@ -20,7 +30,7 @@ const CaseDetailsTechStack = () => {
               Start Date
             </h3>
             <h2 className="text-paragraph-bold md:text-base-bold text-primary-black-200 dark:text-white">
-              08/01/2023
+              {startDate}
             </h2>
           </div>
           <div className="flex flex-col gap-3">
@@ -28,7 +38,7 @@ const CaseDetailsTechStack = () => {
               End Date
             </h3>
             <h2 className="text-paragraph-bold md:text-base-bold text-primary-black-200 dark:text-white">
-              09/01/2023
+              {endDate}
             </h2>
           </div>
         </div>

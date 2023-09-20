@@ -30,8 +30,8 @@ export interface Project {
   demoSiteLink: string;
   sourceCodeLink: string;
   role: string;
-  startDate: Date;
-  endDate: Date;
+  startDate: string;
+  endDate: string;
   techStack: string[];
   description: string;
   problemStatement: string;

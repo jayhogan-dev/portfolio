@@ -57,13 +57,13 @@ export default {
     {
       // Should this be a date or a string?
       name: 'startDate',
-      type: 'date',
+      type: 'string',
       title: 'Start Date',
     },
     {
       // Should this be a date or a string?
       name: 'endDate',
-      type: 'date',
+      type: 'string',
       title: 'End Date',
     },
     {
