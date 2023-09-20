@@ -1,8 +1,21 @@
 import CaseStudyCard from "@/components/CaseStudyCard";
 import DarkContainer from "@/components/containers/Dark";
 import LightContainer from "@/components/containers/Light";
+import { client, urlFor } from "@/lib/sanity";
 
-const CaseStudiesPage = () => {
+async function getData() {
+  const query = `*[_type == "project"]{title, laptopImage, subtitle}`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
+const CaseStudiesPage = async () => {
+  const data = await getData();
+
+  const imageUrl = urlFor(data[0].laptopImage.asset._ref).url();
+
   return (
     <main className="flex flex-col">
       <DarkContainer>
@@ -30,10 +43,10 @@ const CaseStudiesPage = () => {
               linkUrl="/case-studies/morent"
             />
             <CaseStudyCard
-              title="Jobit"
+              title={data[0].title}
               color="bg-green-300"
-              subtitle="Job Finding Application"
-              image="/jobit-laptop.png"
+              subtitle={data[0].subtitle}
+              image={imageUrl}
               linkUrl="/"
             />
             <CaseStudyCard
