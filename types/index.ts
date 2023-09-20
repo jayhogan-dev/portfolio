@@ -32,10 +32,18 @@ export interface Project {
   role: string;
   startDate: string;
   endDate: string;
-  techStack: string[];
   description: string;
   problemStatement: string;
-  figmaDesign: string;
+  problemStatementImage: {
+    asset: {
+      _ref: string;
+    };
+  };
+  figmaDesign: {
+    asset: {
+      _ref: string;
+    };
+  };
   challenges: string[];
   learnings: string[];
   _id: string;

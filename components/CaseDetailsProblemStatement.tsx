@@ -2,15 +2,13 @@ import Image from "next/image";
 import LightContainer from "./containers/Light";
 
 interface CaseDetailsProblemStatementProps {
-  statement: string;
-  image: string;
-  altText: string;
+  problemStatement: string;
+  problemStatementImage: string;
 }
 
 const CaseDetailsProblemStatement = ({
-  statement,
-  image,
-  altText,
+  problemStatement,
+  problemStatementImage,
 }: CaseDetailsProblemStatementProps) => {
   return (
     <LightContainer>
@@ -21,12 +19,12 @@ const CaseDetailsProblemStatement = ({
           </h3>
           <h2 className="text-heading3 mb-2">Problem Statement</h2>
           <p className="text-small-regular sm:text-paragraph-regular text-primary-white-500 dark:text-primary-white-800">
-            {statement}
+            {problemStatement}
           </p>
           <div className="mt-2 relative w-full h-48 xs:h-64 md:h-[275px] lg:h-[420px] xl:h-[475px]">
             <Image
-              src={image}
-              alt={altText}
+              src={problemStatementImage}
+              alt="Problem Statement Image"
               fill
               className="rounded-lg"
             />

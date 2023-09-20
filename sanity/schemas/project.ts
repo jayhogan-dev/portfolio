@@ -30,6 +30,11 @@ export default {
       title: 'Mobile Image',
     },
     {
+      name: 'problemStatementImage',
+      type: 'image',
+      title: 'Problem Statement Image',
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
@@ -65,13 +70,6 @@ export default {
       name: 'endDate',
       type: 'string',
       title: 'End Date',
-    },
-    {
-      // Going to need a label as well
-      name: 'techStack',
-      type: 'array',
-      title: 'Tech Stack',
-      of: [{type: 'string'}],
     },
     {
       name: 'description',

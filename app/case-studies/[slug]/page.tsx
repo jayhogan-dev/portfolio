@@ -1,8 +1,16 @@
 import CaseDetailsDescription from "@/components/CaseDetailsDescription";
+import CaseDetailsFigma from "@/components/CaseDetailsFigma";
 import CaseDetailsHeader from "@/components/CaseDetailsHeader";
+import CaseDetailsLearnings from "@/components/CaseDetailsLearnings";
+import CaseDetailsOtherStudies from "@/components/CaseDetailsOtherStudies";
+import CaseDetailsProblemStatement from "@/components/CaseDetailsProblemStatement";
+import CaseDetailsProcess from "@/components/CaseDetailsProcess";
 import CaseDetailsTechStack from "@/components/CaseDetailsTechStack";
+import ContactBanner from "@/components/ContactBanner";
 import { client, urlFor } from "@/lib/sanity";
 import { Project } from "@/types";
+
+// export const revalidate = 10;
 
 async function getData(slug: string) {
   const query = `*[_type == "project" && slug.current == "${slug}"][0]`;
@@ -31,16 +39,19 @@ const SlugPage = async ({ params }: { params: { slug: string } }) => {
         endDate={data.endDate}
       />
       <CaseDetailsDescription description={data.description} />
-      {/* <CaseDetailsProblemStatement
-        statement="One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals."
-        image="/case-details/morent-problem.png"
-        altText="Cars"
+      <CaseDetailsProblemStatement
+        problemStatement={data.problemStatement}
+        problemStatementImage={urlFor(
+          data.problemStatementImage.asset._ref
+        ).url()}
       />
-      <CaseDetailsFigma imgUrl="/case-details/morent-figma.png" />
+      <CaseDetailsFigma
+        figmaDesign={urlFor(data.figmaDesign.asset._ref).url()}
+      />
       <CaseDetailsProcess />
       <CaseDetailsLearnings />
       <CaseDetailsOtherStudies />
-      <ContactBanner /> */}
+      <ContactBanner />
     </div>
   );
 };
