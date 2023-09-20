@@ -1,12 +1,19 @@
 import React from "react";
 import LightContainer from "./containers/Light";
 import Image from "next/image";
-import { challenges, learnings } from "@/constants";
 
-const CaseDetailsLearnings = () => {
+interface CaseDetailsLearningsProps {
+  challenges: string[];
+  learnings: string[];
+}
+
+const CaseDetailsLearnings = ({
+  challenges,
+  learnings,
+}: CaseDetailsLearningsProps) => {
   return (
     <LightContainer>
-      <section className="flex flex-col py-12 gap-6 md:py-[72px] items-center justify-center w-full">
+      <section className="flex flex-col py-10 gap-6 md:py-[30px] items-center justify-center w-full">
         <div className="flex mt-5 flex-col gap-3 w-full sm:w-[500px] md:w-[600px] lg:w-[880px]">
           <h3 className="text-xs text-primary-blue-light dark:text-primary-blue-dark font-semibold">
             Problem
@@ -18,7 +25,7 @@ const CaseDetailsLearnings = () => {
             </h3>
             {challenges.map((challenge) => (
               <div
-                key={challenge.id}
+                key={challenge}
                 className="flex flex-row items-start gap-3"
               >
                 <Image
@@ -29,7 +36,7 @@ const CaseDetailsLearnings = () => {
                   className="mt-1"
                 />
                 <p className="text-small-regular md:text-body-regular text-primary-white-500 dark:text-primary-white-800">
-                  {challenge.description}
+                  {challenge}
                 </p>
               </div>
             ))}
@@ -40,7 +47,7 @@ const CaseDetailsLearnings = () => {
             </h3>
             {learnings.map((learning) => (
               <div
-                key={learning.id}
+                key={learning}
                 className="flex flex-row items-start gap-3"
               >
                 <Image
@@ -51,7 +58,7 @@ const CaseDetailsLearnings = () => {
                   className="mt-1"
                 />
                 <p className="text-small-regular md:text-body-regular text-primary-white-500 dark:text-primary-white-800">
-                  {learning.description}
+                  {learning}
                 </p>
               </div>
             ))}

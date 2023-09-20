@@ -27,7 +27,7 @@ const CaseDetailsHeader = ({
           Web Dev Project
         </h2>
         <div className="w-[320px] lg:w-full">
-          <SectionTitle title={`${title} - ${subtitle}`} />
+          <SectionTitle title={`${title} - A ${subtitle}`} />
         </div>
         <div className="relative -top-[120px] -left-[68px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[126px] lg:w-[170px] lg:-top-[80px] lg:-left-[275px]" />
         <div className="flex flex-row -mt-16 items-end">

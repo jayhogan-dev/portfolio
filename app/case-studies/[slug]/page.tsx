@@ -49,7 +49,10 @@ const SlugPage = async ({ params }: { params: { slug: string } }) => {
         figmaDesign={urlFor(data.figmaDesign.asset._ref).url()}
       />
       <CaseDetailsProcess />
-      <CaseDetailsLearnings />
+      <CaseDetailsLearnings
+        challenges={data.challenges}
+        learnings={data.learnings}
+      />
       <CaseDetailsOtherStudies />
       <ContactBanner />
     </div>
