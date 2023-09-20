@@ -15,6 +15,11 @@ export default {
       title: 'Subtitle',
     },
     {
+      name: 'color',
+      type: 'string',
+      title: 'Color',
+    },
+    {
       name: 'laptopImage',
       type: 'image',
       title: 'Laptop Image',

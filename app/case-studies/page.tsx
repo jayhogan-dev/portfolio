@@ -2,9 +2,10 @@ import CaseStudyCard from "@/components/CaseStudyCard";
 import DarkContainer from "@/components/containers/Dark";
 import LightContainer from "@/components/containers/Light";
 import { client, urlFor } from "@/lib/sanity";
+import { Project } from "@/types";
 
 async function getData() {
-  const query = `*[_type == "project"]{title, laptopImage, subtitle}`;
+  const query = `*[_type == "project"]{title, laptopImage, subtitle, slug, color, _id}`;
 
   const data = await client.fetch(query);
 
@@ -12,9 +13,7 @@ async function getData() {
 }
 
 const CaseStudiesPage = async () => {
-  const data = await getData();
-
-  const imageUrl = urlFor(data[0].laptopImage.asset._ref).url();
+  const data = (await getData()) as Project[];
 
   return (
     <main className="flex flex-col">
@@ -35,27 +34,16 @@ const CaseStudiesPage = async () => {
       <LightContainer>
         <section className="flex flex-col py-12 md:py-[72px] items-center justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10">
-            <CaseStudyCard
-              title="Morent"
-              color="bg-blue-300"
-              subtitle="Car Rental Application"
-              image="/morent-laptop.png"
-              linkUrl="/case-studies/morent"
-            />
-            <CaseStudyCard
-              title={data[0].title}
-              color="bg-green-300"
-              subtitle={data[0].subtitle}
-              image={imageUrl}
-              linkUrl="/"
-            />
-            <CaseStudyCard
-              title="Test"
-              color="bg-red-300"
-              subtitle="AI Application"
-              image="/jobit-laptop.png"
-              linkUrl="/"
-            />
+            {data.map((project) => (
+              <CaseStudyCard
+                key={project._id}
+                title={project.title}
+                color={project.color}
+                subtitle={project.subtitle}
+                image={urlFor(project.laptopImage.asset._ref).url()}
+                linkUrl={`/case-studies/${project.slug?.current}`}
+              />
+            ))}
           </div>
         </section>
       </LightContainer>
