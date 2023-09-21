@@ -22,7 +22,7 @@ const CaseStudyCard = ({
       <Link
         href={linkUrl}
         className={cn(
-          `flex h-52 w-80 sm:h-56 sm:w-[350px] lg:h-64 lg:w-[420px] xl:h-72 xl:w-[550px] relative rounded-2xl hover:animate-pulse`,
+          "flex h-52 w-80 sm:h-56 sm:w-[350px] lg:h-64 lg:w-[420px] xl:h-72 xl:w-[550px] relative rounded-2xl hover:animate-pulse",
           color
         )}
       >

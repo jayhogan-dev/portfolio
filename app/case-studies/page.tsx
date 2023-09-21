@@ -4,6 +4,8 @@ import LightContainer from "@/components/containers/Light";
 import { client, urlFor } from "@/lib/sanity";
 import { Project } from "@/types";
 
+// export const revalidate = 10;
+
 async function getData() {
   const query = `*[_type == "project"]{title, laptopImage, subtitle, slug, color, _id}`;
 
