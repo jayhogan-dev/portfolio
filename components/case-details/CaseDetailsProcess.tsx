@@ -1,5 +1,5 @@
 import { myProcesses } from "@/constants";
-import LightContainer from "./containers/Light";
+import LightContainer from "../containers/Light";
 import Image from "next/image";
 
 const CaseDetailsProcess = () => {

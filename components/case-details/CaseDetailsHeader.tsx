@@ -1,6 +1,6 @@
 import Image from "next/image";
-import DarkContainer from "./containers/Dark";
-import SectionTitle from "./SectionTitle";
+import DarkContainer from "../containers/Dark";
+import SectionTitle from "../SectionTitle";
 import Link from "next/link";
 
 interface CaseDetailsHeaderProps {

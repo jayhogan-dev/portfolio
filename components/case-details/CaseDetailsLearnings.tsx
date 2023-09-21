@@ -1,5 +1,5 @@
 import React from "react";
-import LightContainer from "./containers/Light";
+import LightContainer from "../containers/Light";
 import Image from "next/image";
 
 interface CaseDetailsLearningsProps {

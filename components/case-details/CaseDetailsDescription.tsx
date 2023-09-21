@@ -1,4 +1,4 @@
-import DarkContainer from "./containers/Dark";
+import DarkContainer from "../containers/Dark";
 
 interface CaseDetailsDescriptionProps {
   description: string;

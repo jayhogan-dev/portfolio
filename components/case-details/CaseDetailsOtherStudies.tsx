@@ -1,5 +1,5 @@
 import CaseDetailsOtherStudyCard from "./CaseDetailsOtherStudyCard";
-import DarkContainer from "./containers/Dark";
+import DarkContainer from "../containers/Dark";
 
 const CaseDetailsOtherStudies = () => {
   return (

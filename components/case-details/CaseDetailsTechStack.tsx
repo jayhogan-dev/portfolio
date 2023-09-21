@@ -1,6 +1,6 @@
 import { morentStack } from "@/constants";
-import TechStack from "./TechStack";
-import LightContainer from "./containers/Light";
+import TechStack from "../TechStack";
+import LightContainer from "../containers/Light";
 
 interface CaseDetailsTechStackProps {
   role: string;
