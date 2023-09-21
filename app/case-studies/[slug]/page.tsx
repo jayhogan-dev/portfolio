@@ -10,7 +10,7 @@ import ContactBanner from "@/components/ContactBanner";
 import { client, urlFor } from "@/lib/sanity";
 import { Project } from "@/types";
 
-// export const revalidate = 10;
+export const revalidate = 500;
 
 async function getData(slug: string) {
   const query = `*[_type == "project" && slug.current == "${slug}"][0]`;
@@ -38,7 +38,10 @@ const SlugPage = async ({ params }: { params: { slug: string } }) => {
         startDate={data.startDate}
         endDate={data.endDate}
       />
-      <CaseDetailsDescription description={data.description} />
+      <CaseDetailsDescription
+        description={data.description}
+        color={data.color}
+      />
       <CaseDetailsProblemStatement
         problemStatement={data.problemStatement}
         problemStatementImage={urlFor(

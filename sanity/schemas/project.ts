@@ -4,7 +4,6 @@ export default {
   title: 'Project',
   fields: [
     {
-      // Morent - A Car Rental Website
       name: 'title',
       type: 'string',
       title: 'Title',
@@ -43,13 +42,11 @@ export default {
       },
     },
     {
-      // Header demo site link: should this be url instead?
       name: 'demoSiteLink',
       type: 'url',
       title: 'Demo Site Link',
     },
     {
-      // Header source code link: should this be url instead?
       name: 'sourceCodeLink',
       type: 'string',
       title: 'Source Code Link',
@@ -60,13 +57,11 @@ export default {
       title: 'My Role',
     },
     {
-      // Should this be a date or a string?
       name: 'startDate',
       type: 'string',
       title: 'Start Date',
     },
     {
-      // Should this be a date or a string?
       name: 'endDate',
       type: 'string',
       title: 'End Date',

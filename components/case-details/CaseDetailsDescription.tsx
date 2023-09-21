@@ -2,10 +2,12 @@ import DarkContainer from "../containers/Dark";
 
 interface CaseDetailsDescriptionProps {
   description: string;
+  color: string;
 }
 
 const CaseDetailsDescription = ({
   description,
+  color,
 }: CaseDetailsDescriptionProps) => {
   const paragraphs = description
     .split("\n")
