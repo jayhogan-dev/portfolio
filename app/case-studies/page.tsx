@@ -4,7 +4,7 @@ import LightContainer from "@/components/containers/Light";
 import { client, urlFor } from "@/lib/sanity";
 import { Project } from "@/types";
 
-// export const revalidate = 10;
+export const revalidate = 500;
 
 async function getData() {
   const query = `*[_type == "project"]{title, laptopImage, subtitle, slug, color, _id}`;
@@ -40,7 +40,6 @@ const CaseStudiesPage = async () => {
               <CaseStudyCard
                 key={project._id}
                 title={project.title}
-                color={project.color}
                 subtitle={project.subtitle}
                 image={urlFor(project.laptopImage.asset._ref).url()}
                 linkUrl={`/case-studies/${project.slug?.current}`}
