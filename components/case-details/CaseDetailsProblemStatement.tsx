@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LightContainer from "./containers/Light";
+import LightContainer from "../containers/Light";
 
 interface CaseDetailsProblemStatementProps {
   problemStatement: string;

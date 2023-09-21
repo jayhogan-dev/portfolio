@@ -1,12 +1,5 @@
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from "./ui/card";
-import { Button } from "./ui/button";
+import { Card, CardHeader, CardContent, CardFooter } from "../ui/card";
+import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
