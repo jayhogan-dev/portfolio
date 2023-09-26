@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -30,6 +31,13 @@ const formSchema = z.object({
   }),
   email: z.string().email({
     message: "Must be a valid email address",
+  }),
+  project: z
+    .string()
+    .min(2)
+    .max(500, { message: "No more than 500 characters " }),
+  contact: z.string().min(2, {
+    message: "Name must be at least 2 characters",
   }),
 });
 
@@ -39,13 +47,12 @@ const ContactPage = () => {
     defaultValues: {
       name: "",
       email: "",
+      project: "",
+      contact: "",
     },
   });
 
-  // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log(values);
   }
   return (
@@ -62,8 +69,8 @@ const ContactPage = () => {
         </section>
       </DarkContainer>
       <LightContainer>
-        <section className="flex flex-col-reverse py-12 gap-5 md:py-[72px] md:flex-row">
-          <aside className="w-full flex flex-col gap-9 md:gap-20">
+        <section className="flex flex-col-reverse py-12 gap-x-32 gap-y-20 md:py-[72px] md:flex-row">
+          <aside className="w-full md:w-1/3 flex flex-col gap-9 md:gap-20">
             <div className="flex flex-col gap-2 md:gap-7">
               <h2 className="text-paragraph-regular md:text-base-regular text-primary-black-300 dark:text-white">
                 My Socials
@@ -107,7 +114,7 @@ const ContactPage = () => {
               </div>
             </div>
           </aside>
-          <article className="w-full flex flex-col gap-9 md:gap-20">
+          <article className="w-full md:w-2/3 flex flex-col gap-9 md:gap-20">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
@@ -149,7 +156,50 @@ const ContactPage = () => {
                     </FormItem>
                   )}
                 />
-                <Button type="submit">Submit</Button>
+                <FormField
+                  control={form.control}
+                  name="project"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
+                        Write something about your project goals and timeframe
+                      </FormLabel>
+                      <FormControl className="bg-primary-white-800 h-24 md:h-40">
+                        <Textarea
+                          {...field}
+                          className="text-body-regular md:text-paragraph-regular rounded-lg"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="contact"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
+                        How can I contact you? ex. phone number or email address
+                      </FormLabel>
+                      <FormControl className="bg-primary-white-800 h-16 md:h-20">
+                        <Input
+                          {...field}
+                          className="text-body-regular md:text-paragraph-regular rounded-lg"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <div className="flex items-center justify-end">
+                  <Button
+                    type="submit"
+                    className="text-body-bold text-white w-full md:w-52"
+                  >
+                    Send
+                  </Button>
+                </div>
               </form>
             </Form>
           </article>
