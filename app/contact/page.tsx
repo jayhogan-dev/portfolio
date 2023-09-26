@@ -1,15 +1,53 @@
+"use client";
+
 import SectionTitle from "@/components/SectionTitle";
 import DarkContainer from "@/components/containers/Dark";
 import LightContainer from "@/components/containers/Light";
 import Link from "next/link";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
 // SVGR
 import LinkedIn from "@/public/social-icons/linkedin.svg";
 import Github from "@/public/social-icons/github.svg";
 import Phone from "@/public/web-icons/phone.svg";
 import Email from "@/public/web-icons/email.svg";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+const formSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters",
+  }),
+  email: z.string().email({
+    message: "Must be a valid email address",
+  }),
+});
 
 const ContactPage = () => {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+    },
+  });
+
+  // 2. Define a submit handler.
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // Do something with the form values.
+    // ✅ This will be type-safe and validated.
+    console.log(values);
+  }
   return (
     <>
       <DarkContainer>
@@ -24,7 +62,7 @@ const ContactPage = () => {
         </section>
       </DarkContainer>
       <LightContainer>
-        <section className="flex flex-col-reverse py-12 gap-5 items-center justify-center md:py-[72px] md:flex-row">
+        <section className="flex flex-col-reverse py-12 gap-5 md:py-[72px] md:flex-row">
           <aside className="w-full flex flex-col gap-9 md:gap-20">
             <div className="flex flex-col gap-2 md:gap-7">
               <h2 className="text-paragraph-regular md:text-base-regular text-primary-black-300 dark:text-white">
@@ -69,7 +107,52 @@ const ContactPage = () => {
               </div>
             </div>
           </aside>
-          <article className="bg-red-300 w-full flex flex-col gap-9 md:gap-20"></article>
+          <article className="w-full flex flex-col gap-9 md:gap-20">
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-8"
+              >
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
+                        What&apos;s your full name?
+                      </FormLabel>
+                      <FormControl className="bg-primary-white-800 h-16 md:h-20">
+                        <Input
+                          {...field}
+                          className="text-body-regular md:text-paragraph-regular rounded-lg"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
+                        What&apos;s your email?
+                      </FormLabel>
+                      <FormControl className="bg-primary-white-800 h-16 md:h-20">
+                        <Input
+                          {...field}
+                          className="text-body-regular md:text-paragraph-regular rounded-lg"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button type="submit">Submit</Button>
+              </form>
+            </Form>
+          </article>
         </section>
       </LightContainer>
     </>
