@@ -26,7 +26,7 @@ const CaseDetailsProblemStatement = ({
               src={problemStatementImage}
               alt="Problem Statement Image"
               fill
-              className="rounded-lg"
+              className="rounded-lg object-cover"
             />
           </div>
         </div>
