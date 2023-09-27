@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import * as z from "zod";
+import { sendEmail } from "@/lib/actions";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -42,9 +43,15 @@ const ContactForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    await sendEmail({
+      name: values.name,
+      email: values.email,
+      project: values.project,
+      contact: values.contact,
+    });
   }
+
   return (
     <Form {...form}>
       <form

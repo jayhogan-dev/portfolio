@@ -48,3 +48,10 @@ export interface Project {
   learnings: string[];
   _id: string;
 }
+
+export interface EmailTemplateProps {
+  name: string;
+  email: string;
+  project: string;
+  contact: string;
+}
