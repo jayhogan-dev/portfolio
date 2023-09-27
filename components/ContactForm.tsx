@@ -66,7 +66,7 @@ const ContactForm = () => {
               <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
                 What&apos;s your full name?
               </FormLabel>
-              <FormControl className="bg-primary-white-800 h-16 md:h-20">
+              <FormControl className="bg-primary-white-800 dark:bg-primary-black-500 h-12 md:h-16">
                 <Input
                   {...field}
                   className="text-body-regular md:text-paragraph-regular rounded-lg"
@@ -84,7 +84,7 @@ const ContactForm = () => {
               <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
                 What&apos;s your email?
               </FormLabel>
-              <FormControl className="bg-primary-white-800 h-16 md:h-20">
+              <FormControl className="bg-primary-white-800 dark:bg-primary-black-500 h-12 md:h-16">
                 <Input
                   {...field}
                   className="text-body-regular md:text-paragraph-regular rounded-lg"
@@ -102,7 +102,7 @@ const ContactForm = () => {
               <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
                 Write something about your project goals and timeframe
               </FormLabel>
-              <FormControl className="bg-primary-white-800 h-24 md:h-40">
+              <FormControl className="bg-primary-white-800 dark:bg-primary-black-500 h-24 md:h-40">
                 <Textarea
                   {...field}
                   className="text-body-regular md:text-paragraph-regular rounded-lg"
@@ -120,7 +120,7 @@ const ContactForm = () => {
               <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
                 How can I contact you? ex. phone number or email address
               </FormLabel>
-              <FormControl className="bg-primary-white-800 h-16 md:h-20">
+              <FormControl className="bg-primary-white-800 dark:bg-primary-black-500 h-12 md:h-16">
                 <Input
                   {...field}
                   className="text-body-regular md:text-paragraph-regular rounded-lg"
