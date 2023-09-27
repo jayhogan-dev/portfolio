@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import * as z from "zod";
+import { sendEmail } from "@/lib/actions";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -42,9 +43,15 @@ const ContactForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    await sendEmail({
+      name: values.name,
+      email: values.email,
+      project: values.project,
+      contact: values.contact,
+    });
   }
+
   return (
     <Form {...form}>
       <form
@@ -59,7 +66,7 @@ const ContactForm = () => {
               <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
                 What&apos;s your full name?
               </FormLabel>
-              <FormControl className="bg-primary-white-800 h-16 md:h-20">
+              <FormControl className="bg-primary-white-800 dark:bg-primary-black-500 h-12 md:h-16">
                 <Input
                   {...field}
                   className="text-body-regular md:text-paragraph-regular rounded-lg"
@@ -77,7 +84,7 @@ const ContactForm = () => {
               <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
                 What&apos;s your email?
               </FormLabel>
-              <FormControl className="bg-primary-white-800 h-16 md:h-20">
+              <FormControl className="bg-primary-white-800 dark:bg-primary-black-500 h-12 md:h-16">
                 <Input
                   {...field}
                   className="text-body-regular md:text-paragraph-regular rounded-lg"
@@ -95,7 +102,7 @@ const ContactForm = () => {
               <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
                 Write something about your project goals and timeframe
               </FormLabel>
-              <FormControl className="bg-primary-white-800 h-24 md:h-40">
+              <FormControl className="bg-primary-white-800 dark:bg-primary-black-500 h-24 md:h-40">
                 <Textarea
                   {...field}
                   className="text-body-regular md:text-paragraph-regular rounded-lg"
@@ -113,7 +120,7 @@ const ContactForm = () => {
               <FormLabel className="text-body-regular md:text-paragraph-regular text-primary-black-300 dark:text-primary-white-800">
                 How can I contact you? ex. phone number or email address
               </FormLabel>
-              <FormControl className="bg-primary-white-800 h-16 md:h-20">
+              <FormControl className="bg-primary-white-800 dark:bg-primary-black-500 h-12 md:h-16">
                 <Input
                   {...field}
                   className="text-body-regular md:text-paragraph-regular rounded-lg"

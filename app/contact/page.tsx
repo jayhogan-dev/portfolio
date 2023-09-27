@@ -16,9 +16,11 @@ const ContactPage = () => {
       <DarkContainer>
         <section className="flex flex-col py-12 gap-6 md:py-[72px] items-center justify-center">
           <div className="w-[320px] lg:w-full">
-            <SectionTitle title="Get In Touch" />
+            <h1 className="relative text-4xl text-center font-bold leading-[115%] tracking-[-0.36px] lg:text-heading1 dark:text-white text-primary-black-300 mb-10 z-10">
+              Get in Touch
+            </h1>
           </div>
-          <div className="relative -top-[76px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[220px] lg:w-[290px] lg:-top-[80px]" />
+          <div className="relative -top-[76px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[220px] lg:w-[390px] lg:-top-[90px]" />
           <h2 className="-mt-16 text-small-regular md:text-paragraph-regular text-primary-white-500 dark:text-primary-white-800">
             Let&apos;s Collaborate on Your Next Project
           </h2>
@@ -51,9 +53,9 @@ const ContactPage = () => {
               <h2 className="text-paragraph-regular md:text-base-regular text-primary-black-300 dark:text-white">
                 Phone Number
               </h2>
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-2 items-center">
                 <Phone className="fill-primary-black-400 dark:fill-white" />
-                <p className="text-paragraph-bold md:text-base-bold text-primary-black-400 dark:text-primary-white-800">
+                <p className="text-paragraph-bold text-primary-black-400 dark:text-primary-white-800">
                   203.528.7208
                 </p>
               </div>
@@ -62,9 +64,9 @@ const ContactPage = () => {
               <h2 className="text-paragraph-regular md:text-base-regular text-primary-black-300 dark:text-white">
                 Email Address
               </h2>
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-2 items-center">
                 <Email className="fill-primary-black-400 dark:fill-white" />
-                <p className="text-paragraph-bold md:text-base-bold text-primary-black-400 dark:text-primary-white-800">
+                <p className="text-paragraph-bold text-primary-black-400 dark:text-primary-white-800">
                   jayhogan.dev@gmail.com
                 </p>
               </div>
