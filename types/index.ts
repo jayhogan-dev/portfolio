@@ -46,6 +46,16 @@ export interface Project {
   };
   challenges: string[];
   learnings: string[];
+  techStack: [
+    {
+      label: string;
+      icon: {
+        asset: {
+          _ref: string;
+        };
+      };
+    }
+  ];
   _id: string;
 }
 
@@ -54,4 +64,13 @@ export interface EmailTemplateProps {
   email: string;
   project: string;
   contact: string;
+}
+
+export interface TechStackItem {
+  label: string;
+  icon: {
+    asset: {
+      _ref: string;
+    };
+  };
 }

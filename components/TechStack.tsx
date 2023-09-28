@@ -5,11 +5,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-
-type DataArray<T> = Array<{ [key: string]: T }>;
+import { TechStackItem } from "@/types";
+import { urlFor } from "@/lib/sanity";
 
 interface TechStackProps {
-  data: DataArray<string>;
+  data: TechStackItem[];
 }
 
 const TechStack = ({ data }: TechStackProps) => {
@@ -25,7 +25,7 @@ const TechStack = ({ data }: TechStackProps) => {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Image
-                    src={item.icon}
+                    src={urlFor(item.icon.asset._ref).url()}
                     alt={item.label}
                     fill
                     className="cursor-pointer"

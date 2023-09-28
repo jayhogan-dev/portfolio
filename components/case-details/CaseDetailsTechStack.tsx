@@ -1,4 +1,4 @@
-import { morentStack } from "@/constants";
+import { TechStackItem } from "@/types";
 import TechStack from "../TechStack";
 import LightContainer from "../containers/Light";
 
@@ -6,12 +6,14 @@ interface CaseDetailsTechStackProps {
   role: string;
   startDate: string;
   endDate: string;
+  techStack: TechStackItem[];
 }
 
 const CaseDetailsTechStack = ({
   role,
   startDate,
   endDate,
+  techStack,
 }: CaseDetailsTechStackProps) => {
   return (
     <LightContainer>
@@ -47,7 +49,7 @@ const CaseDetailsTechStack = ({
             Technologies Used
           </h3>
           <h2 className="text-heading3 mb-2">Tech Stack</h2>
-          <TechStack data={morentStack} />
+          <TechStack data={techStack} />
         </div>
       </section>
     </LightContainer>
