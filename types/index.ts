@@ -74,3 +74,9 @@ export interface TechStackItem {
     };
   };
 }
+
+export interface CaseDetailsOtherStudiesProps {
+  title: string;
+  subtitle: string;
+  laptopImage: string;
+}
