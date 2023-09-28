@@ -9,6 +9,8 @@ import MobileNavbar from "./MobileNavbar";
 import { routes } from "@/constants";
 import { cn } from "@/lib/utils";
 
+import Download from "@/public/web-icons/download.svg";
+
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState("");
   const pathname = usePathname();
@@ -42,7 +44,17 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li>Resume</li>
+          <li>
+            <Link
+              href="/files/resume.pdf"
+              target="_blank"
+              className="text-primary-white-500 dark:text-primary-white-800 cursor-pointer hover:text-primary-black-300 flex justify-center gap-1"
+              download
+            >
+              <Download className="fill-primary-black-300 dark:fill-white" />
+              Resume
+            </Link>
+          </li>
         </ul>
         <Image
           src="/web-icons/line.svg"
