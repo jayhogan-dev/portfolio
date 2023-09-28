@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import * as z from "zod";
 import { sendEmail } from "@/lib/actions";
+import { useToast } from "@/components/ui/use-toast";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -33,6 +34,8 @@ const formSchema = z.object({
 });
 
 const ContactForm = () => {
+  const { toast } = useToast();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -44,12 +47,29 @@ const ContactForm = () => {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    await sendEmail({
-      name: values.name,
-      email: values.email,
-      project: values.project,
-      contact: values.contact,
-    });
+    try {
+      await sendEmail({
+        name: values.name,
+        email: values.email,
+        project: values.project,
+        contact: values.contact,
+      });
+
+      toast({
+        title: "Message sent successfully!",
+        description:
+          "Thank you for reaching out! I look forward to potentially working with you.",
+      });
+
+      form.reset();
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "There was an error processing your request!",
+        description:
+          "Please try again and if the error persists, please email me directly at jayhogan.dev@gmail.com",
+      });
+    }
   }
 
   return (
