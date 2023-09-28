@@ -7,6 +7,7 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
+  SheetClose,
   SheetTrigger,
 } from "./ui/sheet";
 import Image from "next/image";
@@ -66,18 +67,22 @@ const MobileSidebar = () => {
         <Separator />
         <div className="flex flex-col items-center mt-10 gap-5">
           {routes.map((route) => (
-            <Link
+            <SheetClose
               key={route.label}
-              href={route.href}
-              className={cn(
-                "flex w-full cursor-pointer justify-center rounded-lg p-3 text-sm font-medium transition hover:bg-primary-blue-light hover:text-white",
-                pathname === route.href
-                  ? "text-white bg-primary-blue-light"
-                  : "text-primary-black-400"
-              )}
+              asChild
             >
-              {route.label}
-            </Link>
+              <Link
+                href={route.href}
+                className={cn(
+                  "flex w-full cursor-pointer justify-center rounded-lg p-3 text-sm font-medium transition hover:bg-primary-blue-light hover:text-white",
+                  pathname === route.href
+                    ? "text-white bg-primary-blue-light"
+                    : "text-primary-black-400"
+                )}
+              >
+                {route.label}
+              </Link>
+            </SheetClose>
           ))}
           <Link
             key="resume"
