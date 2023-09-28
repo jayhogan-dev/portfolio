@@ -50,6 +50,8 @@ const ContactForm = () => {
       project: values.project,
       contact: values.contact,
     });
+
+    form.reset();
   }
 
   return (
