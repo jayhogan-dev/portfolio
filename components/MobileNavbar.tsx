@@ -17,6 +17,8 @@ import { routes } from "@/constants";
 import { Separator } from "./ui/separator";
 import { cn } from "@/lib/utils";
 
+import Download from "@/public/web-icons/download.svg";
+
 const MobileSidebar = () => {
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
@@ -53,16 +55,18 @@ const MobileSidebar = () => {
         className="p-10"
       >
         <SheetHeader>
-          <Link
-            href="/contact"
-            className="bg-gradient-to-br from-cyan-800 via-cyan-400 to-yellow-300 relative h-10 w-10 mb-5 hover:scale-110 rounded-lg"
-          >
-            <Image
-              src="/logo.svg"
-              alt="logo"
-              fill
-            />
-          </Link>
+          <SheetClose asChild>
+            <Link
+              href="/"
+              className="bg-gradient-to-br from-cyan-800 via-cyan-400 to-yellow-300 relative h-10 w-10 mb-5 hover:scale-110 rounded-lg"
+            >
+              <Image
+                src="/logo.svg"
+                alt="logo"
+                fill
+              />
+            </Link>
+          </SheetClose>
         </SheetHeader>
         <Separator />
         <div className="flex flex-col items-center mt-10 gap-5">
@@ -74,10 +78,10 @@ const MobileSidebar = () => {
               <Link
                 href={route.href}
                 className={cn(
-                  "flex w-full cursor-pointer justify-center rounded-lg p-3 text-sm font-medium transition hover:bg-primary-blue-light hover:text-white",
+                  "flex w-full cursor-pointer justify-center rounded-lg p-3 text-md font-medium transition hover:bg-primary-blue-light hover:text-white",
                   pathname === route.href
                     ? "text-white bg-primary-blue-light"
-                    : "text-primary-black-400"
+                    : "text-primary-black-400 dark:text-primary-white-800"
                 )}
               >
                 {route.label}
@@ -85,15 +89,12 @@ const MobileSidebar = () => {
             </SheetClose>
           ))}
           <Link
-            key="resume"
-            href="/resume"
-            className={cn(
-              "flex w-full cursor-pointer justify-center rounded-lg p-3 text-sm font-medium transition hover:bg-primary-blue-light hover:text-white",
-              pathname === "/resume"
-                ? "text-white bg-primary-blue-light"
-                : "text-primary-black-400"
-            )}
+            href="/files/resume.pdf"
+            target="_blank"
+            className="text-primary-white-400 dark:text-primary-white-800 cursor-pointer hover:text-primary-black-300 flex justify-center gap-1"
+            download
           >
+            <Download className="fill-primary-black-300 dark:fill-white" />
             Resume
           </Link>
         </div>
