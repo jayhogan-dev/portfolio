@@ -55,7 +55,7 @@ const CaseDetailsHeader = ({
               height={24}
             />
             <Link
-              href={demoSiteLink}
+              href={demoSiteLink || "/"}
               className="text-small-bold md:text-paragraph-bold"
             >
               Demo Site
@@ -76,7 +76,7 @@ const CaseDetailsHeader = ({
               height={24}
             />
             <Link
-              href={sourceCodeLink}
+              href={sourceCodeLink || "/"}
               className="text-small-bold md:text-paragraph-bold"
             >
               Source Code
