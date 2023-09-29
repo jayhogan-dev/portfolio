@@ -29,7 +29,7 @@ const CaseDetailsHeader = ({
         <div className="w-[320px] lg:w-full">
           <SectionTitle title={`${title} - A ${subtitle}`} />
         </div>
-        <div className="relative -top-[120px] -left-[68px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[126px] lg:w-[170px] lg:-top-[80px] lg:-left-[275px]" />
+        <div className="relative -top-[120px] bg-gradient-to-r from-cyan-400 to-yellow-300 dark:from-cyan-800 dark:via-cyan-400 dark:to-yellow-300 h-4 w-[150px] lg:w-[200px] lg:-top-[80px]" />
         <div className="flex flex-row -mt-16 items-end">
           <div className="relative w-[230px] h-32 sm:w-[400px] sm:h-[250px] lg:w-[475px] lg:h-[300px]">
             <Image
@@ -58,7 +58,7 @@ const CaseDetailsHeader = ({
               href={demoSiteLink || "/"}
               className="text-small-bold md:text-paragraph-bold"
             >
-              Demo Site
+              {demoSiteLink ? "Demo Site" : "No Demo Site"}
             </Link>
             <Image
               src="/web-icons/carousel-right-arrow.svg"
