@@ -15,8 +15,11 @@ const BlogHeader = ({ title, subtitle, headerImage }: BlogHeaderProps) => {
         <h2 className="text-sm md:text-xl uppercase font-semibold text-primary-blue-light dark:text-primary-blue-dark">
           Blog
         </h2>
-        <div className="w-[320px] lg:w-full">
+        <div className="w-[320px] lg:w-full items-center flex flex-col">
           <SectionTitle title={title} />
+          <h2 className="-mt-5 text-lg md:text-2xl font-semibold">
+            {subtitle}
+          </h2>
         </div>
         <div className="flex flex-row items-end">
           <div className="relative w-[230px] h-32 sm:w-[400px] sm:h-[250px] lg:w-[475px] lg:h-[300px]">
@@ -24,6 +27,7 @@ const BlogHeader = ({ title, subtitle, headerImage }: BlogHeaderProps) => {
               src={headerImage}
               alt="image"
               fill
+              className="rounded-xl"
             />
           </div>
         </div>
