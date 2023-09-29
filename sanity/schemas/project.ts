@@ -93,5 +93,27 @@ export default {
       title: 'Learnings',
       of: [{type: 'string'}],
     },
+    {
+      name: 'techStack',
+      type: 'array',
+      title: 'Tech Stack',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'label',
+              title: 'Label',
+              type: 'string',
+            },
+            {
+              name: 'icon',
+              title: 'Icon',
+              type: 'image',
+            },
+          ],
+        },
+      ],
+    },
   ],
 }

@@ -37,6 +37,7 @@ const SlugPage = async ({ params }: { params: { slug: string } }) => {
         role={data.role}
         startDate={data.startDate}
         endDate={data.endDate}
+        techStack={data.techStack}
       />
       <CaseDetailsDescription
         description={data.description}

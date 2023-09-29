@@ -46,6 +46,16 @@ export interface Project {
   };
   challenges: string[];
   learnings: string[];
+  techStack: [
+    {
+      label: string;
+      icon: {
+        asset: {
+          _ref: string;
+        };
+      };
+    }
+  ];
   _id: string;
 }
 
