@@ -49,9 +49,11 @@ const SlugPage = async ({ params }: { params: { slug: string } }) => {
           data.problemStatementImage.asset._ref
         ).url()}
       />
-      <CaseDetailsFigma
-        figmaDesign={urlFor(data.figmaDesign.asset._ref).url()}
-      />
+      {data.figmaDesign && (
+        <CaseDetailsFigma
+          figmaDesign={urlFor(data.figmaDesign.asset._ref).url()}
+        />
+      )}
       <CaseDetailsProcess />
       <CaseDetailsLearnings
         challenges={data.challenges}

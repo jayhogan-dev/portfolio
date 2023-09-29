@@ -66,17 +66,27 @@ export interface EmailTemplateProps {
   contact: string;
 }
 
-export interface TechStackItem {
-  label: string;
-  icon: {
+export interface Blog {
+  title: string;
+  subtitle: string;
+  headerImage: {
     asset: {
       _ref: string;
     };
   };
-}
-
-export interface CaseDetailsOtherStudiesProps {
-  title: string;
-  subtitle: string;
-  laptopImage: string;
+  slug: {
+    current: string;
+  };
+  content: [
+    {
+      _key: string;
+      listItem: string;
+      children: [
+        {
+          text: string;
+        }
+      ];
+    }
+  ];
+  _id: string;
 }
