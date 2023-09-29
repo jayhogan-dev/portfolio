@@ -11,6 +11,10 @@ export const routes = [
     label: "Contact",
     href: "/contact",
   },
+  {
+    label: "Blog",
+    href: "/blog",
+  },
 ];
 
 export const skills = [
@@ -78,26 +82,26 @@ export const skills = [
 
 export const testimonials = [
   {
-    name: "First",
+    name: "Tye",
     quote:
-      "I have had the pleasure of working with Jay as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in ReactJS NextJS, Javascript, Material UI, Tailwind CSS, Redux, and GitHub, and consistently delivers high-quality code",
-    title: "Creator of Nothing",
+      "One of Jay's standout qualities is his ability to convey ideas and requirements in a clear and concise manner. This greatly facilitated our work together, ensuring that we were always on the same page regarding project objectives and tasks. Jay's excellent communication skills were a cornerstone for efficient collaboration, making it easy to address any challenges or changes that arose during the development process. Overall, I highly recommend Jay as a developer and a valued team member.",
+    title: "Full-Stack Developer",
     stars: 5,
   },
-  {
-    name: "Second",
-    quote:
-      "I have had the pleasure of working with Jay as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in ReactJS NextJS, Javascript, Material UI, Tailwind CSS, Redux, and GitHub, and consistently delivers high-quality code",
-    title: "Creator of Something",
-    stars: 4,
-  },
-  {
-    name: "Third",
-    quote:
-      "I have had the pleasure of working with Jay as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in ReactJS NextJS, Javascript, Material UI, Tailwind CSS, Redux, and GitHub, and consistently delivers high-quality code",
-    title: "Alive",
-    stars: 3,
-  },
+  // {
+  //   name: "Second",
+  //   quote:
+  //     "I have had the pleasure of working with Jay as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in ReactJS NextJS, Javascript, Material UI, Tailwind CSS, Redux, and GitHub, and consistently delivers high-quality code",
+  //   title: "Creator of Something",
+  //   stars: 4,
+  // },
+  // {
+  //   name: "Third",
+  //   quote:
+  //     "I have had the pleasure of working with Jay as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in ReactJS NextJS, Javascript, Material UI, Tailwind CSS, Redux, and GitHub, and consistently delivers high-quality code",
+  //   title: "Alive",
+  //   stars: 3,
+  // },
 ];
 
 export const myProcesses = [

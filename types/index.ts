@@ -90,3 +90,12 @@ export interface Blog {
   ];
   _id: string;
 }
+
+export interface TechStackItem {
+  label: string;
+  icon: {
+    asset: {
+      _ref: string;
+    };
+  };
+}
