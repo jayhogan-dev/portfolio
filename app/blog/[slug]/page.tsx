@@ -1,3 +1,4 @@
+import BlogContent from "@/components/BlogContent";
 import BlogHeader from "@/components/BlogHeader";
 import { client, urlFor } from "@/lib/sanity";
 import { Blog } from "@/types";
@@ -22,6 +23,7 @@ const BlogSlugPage = async ({ params }: { params: { slug: string } }) => {
         subtitle={data.subtitle}
         headerImage={urlFor(data.headerImage.asset._ref).url()}
       />
+      <BlogContent content={data.content} />
     </div>
   );
 };

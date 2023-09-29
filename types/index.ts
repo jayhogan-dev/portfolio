@@ -67,6 +67,16 @@ export interface Blog {
   slug: {
     current: string;
   };
-  content: string;
+  content: [
+    {
+      _key: string;
+      listItem: string;
+      children: [
+        {
+          text: string;
+        }
+      ];
+    }
+  ];
   _id: string;
 }
