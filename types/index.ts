@@ -55,3 +55,18 @@ export interface EmailTemplateProps {
   project: string;
   contact: string;
 }
+
+export interface Blog {
+  title: string;
+  subtitle: string;
+  headerImage: {
+    asset: {
+      _ref: string;
+    };
+  };
+  slug: {
+    current: string;
+  };
+  content: string;
+  _id: string;
+}
