@@ -67,6 +67,7 @@ const Testimonials = ({ testimonials }: { testimonials: Testimonial[] }) => {
                   name={testimonial.name}
                   review={testimonial.review}
                   title={testimonial.title}
+                  company={testimonial.company}
                   stars={testimonial.stars}
                   isActive={index === activeTestimonial}
                 />
