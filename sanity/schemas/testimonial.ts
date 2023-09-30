@@ -1,7 +1,7 @@
 export default {
-  name: 'review',
+  name: 'testimonial',
   type: 'document',
-  title: 'Review',
+  title: 'Testimonial',
   fields: [
     {
       name: 'name',
@@ -9,9 +9,9 @@ export default {
       title: 'Name',
     },
     {
-      name: 'quote',
+      name: 'review',
       type: 'text',
-      title: 'Quote',
+      title: 'Review',
     },
     {
       name: 'title',
