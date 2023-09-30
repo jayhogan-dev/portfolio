@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import DarkContainer from "./containers/Dark";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -20,12 +21,12 @@ const Hero = () => {
             profound commitment to excellence
           </p>
           <div className="flex flex-col w-full gap-4 lg:flex-row">
-            <Button
-              className="lg:w-1/3"
-              size="lg"
+            <Link
+              href="/case-studies"
+              className="flex items-center w-full p-2 justify-center rounded-3xl text-sm bg-primary-blue-light dark:bg-primary-blue-dark font-semibold text-white lg:w-1/3"
             >
               My Work
-            </Button>
+            </Link>
             <Button
               variant="default"
               className="lg:w-2/3"
