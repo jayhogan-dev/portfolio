@@ -3,12 +3,24 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
-const CaseDetailsOtherStudyCard = () => {
+interface CaseDetailsOtherStudyCardProps {
+  title: string;
+  image: string;
+  description: string;
+  link: string;
+}
+
+const CaseDetailsOtherStudyCard = ({
+  title,
+  image,
+  description,
+  link,
+}: CaseDetailsOtherStudyCardProps) => {
   return (
     <Card className="w-full bg-white dark:bg-primary-black-500">
       <CardHeader className="relative h-48 md:h-56">
         <Image
-          src="/case-details/morent-figma.png"
+          src={image}
           alt="figma"
           fill
           className="rounded-t-lg"
@@ -16,16 +28,15 @@ const CaseDetailsOtherStudyCard = () => {
       </CardHeader>
       <CardContent>
         <h3 className="mt-5 mb-3 text-paragraph-bold md:text-base-bold text-primary-blue-light dark:text-primary-blue-dark">
-          Jobit
+          {title}
         </h3>
         <p className="text-small-regular md:text-body-regular text-primary-white-500 dark:text-primary-white-800">
-          Jobit, a web app made with React and JSearch API, links developers to
-          millions of job openings. It offers easy job search by...
+          {description}
         </p>
       </CardContent>
       <CardFooter>
         <Link
-          href="/"
+          href={`/case-studies/${link}`}
           className="w-full"
         >
           <Button className="w-full">See Case Study</Button>
