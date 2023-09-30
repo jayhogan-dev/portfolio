@@ -92,14 +92,12 @@ export interface Blog {
 }
 
 export interface Testimonial {
-  testimonial: {
-    name: string;
-    review: string;
-    title: string;
-    company: string;
-    stars: number;
-    _id: string;
-  };
+  name: string;
+  review: string;
+  title: string;
+  company: string;
+  stars: number;
+  _id: string;
 }
 
 export interface TechStackItem {
