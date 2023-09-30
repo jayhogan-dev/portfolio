@@ -26,6 +26,7 @@ const Hero = () => {
         });
       });
   };
+
   return (
     <DarkContainer>
       <section className="flex flex-col items-center pt-6 gap-6 mb-10 md:flex-row md:justify-between lg:gap-10 xl:gap-32 lg:mb-24">
