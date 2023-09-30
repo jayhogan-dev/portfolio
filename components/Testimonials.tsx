@@ -6,11 +6,11 @@ import TestimonialCard from "./TestimonialCard";
 import { Button } from "./ui/button";
 import Image from "next/image";
 
-import { testimonials } from "@/constants";
 import { useState } from "react";
 import IconButton from "./IconButton";
+import { Testimonial } from "@/types";
 
-const Testimonials = () => {
+const Testimonials = ({ testimonials }: { testimonials: Testimonial[] }) => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const handlePrev = () => {
@@ -63,9 +63,9 @@ const Testimonials = () => {
             <div className="md:w-4/5">
               {testimonials.map((testimonial, index) => (
                 <TestimonialCard
-                  key={testimonial.name}
+                  key={testimonial._id}
                   name={testimonial.name}
-                  quote={testimonial.quote}
+                  review={testimonial.review}
                   title={testimonial.title}
                   stars={testimonial.stars}
                   isActive={index === activeTestimonial}

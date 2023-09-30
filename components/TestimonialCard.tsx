@@ -2,18 +2,20 @@ import Stars from "./Stars";
 
 interface TestimonialCardProps {
   name: string;
-  quote: string;
+  review: string;
   title: string;
   stars: number;
   isActive: boolean;
+  company: string;
 }
 
 const TestimonialCard = ({
   name,
-  quote,
+  review,
   title,
   stars,
   isActive,
+  company,
 }: TestimonialCardProps) => {
   return (
     <>
@@ -24,14 +26,17 @@ const TestimonialCard = ({
           </div>
           <blockquote className="flex flex-col gap-5">
             <p className="text-body-regular text-primary-white-500 dark:text-primary-white-800">
-              {quote}
+              {review}
             </p>
             <footer>
               <p className="text-body-semibold text-primary-black-300 dark:text-white">
                 — {name}
               </p>
               <p className="text-body-regular text-primary-white-500 dark:text-primary-white-800">
-                {title}
+                {title} -
+                <span className="pl-2 text-sm text-primary-white-500 dark:text-primary-white-800">
+                  {company}
+                </span>
               </p>
             </footer>
           </blockquote>
