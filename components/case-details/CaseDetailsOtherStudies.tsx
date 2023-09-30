@@ -13,13 +13,13 @@ const CaseDetailsOtherStudies = () => {
           <div className="flex flex-col lg:flex-row gap-5 w-full">
             <CaseDetailsOtherStudyCard
               title="Morent"
-              description="Test"
+              description="Morent, a cutting-edge car rental application that was developed using the MERN stack"
               image="/case-details/morent-figma.png"
               link="morent"
             />
             <CaseDetailsOtherStudyCard
               title="Jobit"
-              description="Jobit, a web app made with React and JSearch API, links developers to millions of job openings. It offers easy job search by..."
+              description="Jobit, a web app made with React and JSearch API, links developers to millions of job openings."
               image="/case-details/jobit-figma.png"
               link="jobit"
             />
