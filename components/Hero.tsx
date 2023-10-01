@@ -1,8 +1,32 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import DarkContainer from "./containers/Dark";
+import Link from "next/link";
+import { useState } from "react";
+import { toast } from "./ui/use-toast";
 
 const Hero = () => {
+  const [email, setEmail] = useState("jayhogan.dev@gmail.com");
+
+  const copyToClipboard = () => {
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        toast({
+          title: "Email copied successfully!",
+        });
+      })
+      .catch((err) => {
+        toast({
+          variant: "destructive",
+          title: "There was an error copying the email!",
+          description: "Please try again!",
+        });
+      });
+  };
+
   return (
     <DarkContainer>
       <section className="flex flex-col items-center pt-6 gap-6 mb-10 md:flex-row md:justify-between lg:gap-10 xl:gap-32 lg:mb-24">
@@ -20,16 +44,17 @@ const Hero = () => {
             profound commitment to excellence
           </p>
           <div className="flex flex-col w-full gap-4 lg:flex-row">
-            <Button
-              className="lg:w-1/3"
-              size="lg"
+            <Link
+              href="/case-studies"
+              className="flex items-center w-full p-2 justify-center rounded-3xl text-sm bg-primary-blue-light dark:bg-primary-blue-dark font-semibold text-white lg:w-1/3"
             >
               My Work
-            </Button>
+            </Link>
             <Button
               variant="default"
               className="lg:w-2/3"
               size="lg"
+              onClick={copyToClipboard}
             >
               <div className="flex w-full justify-between items-center truncate">
                 <span className="text-primary-white-500">

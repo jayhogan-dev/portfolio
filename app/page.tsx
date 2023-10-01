@@ -6,7 +6,22 @@ import Skills from "@/components/Skills";
 import Testimonials from "@/components/Testimonials";
 import WorkExperience from "@/components/WorkExperience";
 
-export default function Home() {
+import { client } from "@/lib/sanity";
+import { Testimonial } from "@/types";
+
+export const revalidate = 500;
+
+async function getData() {
+  const query = `*[_type == "testimonial"]`;
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
+export default async function Home() {
+  const data = (await getData()) as Testimonial[];
+
   return (
     <main className="flex flex-col">
       <Hero />
@@ -14,7 +29,7 @@ export default function Home() {
       <Services />
       <WorkExperience />
       <FeaturedProjects />
-      <Testimonials />
+      <Testimonials testimonials={data} />
       <ContactBanner />
     </main>
   );

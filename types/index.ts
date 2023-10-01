@@ -91,6 +91,15 @@ export interface Blog {
   _id: string;
 }
 
+export interface Testimonial {
+  name: string;
+  review: string;
+  title: string;
+  company: string;
+  stars: number;
+  _id: string;
+}
+
 export interface TechStackItem {
   label: string;
   icon: {
