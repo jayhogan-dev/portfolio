@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="flex w-full items-center justify-between py-8 px-6 md:px-10 lg:px-20 max-w-[1580px]">
       <Link
-        href="/contact"
+        href="/"
         className="bg-gradient-to-br from-cyan-800 via-cyan-400 to-yellow-300 relative h-10 w-10 hover:scale-110 rounded-lg"
       >
         <Image
